@@ -102,7 +102,7 @@ Sitemap
 Testing
 ----------
 - [Beauty](https://github.com/lingtalfi/Beauty): An implementation of the beauty part of the [beauty'n'beast](https://github.com/lingtalfi/Dreamer/blob/master/UnitTesting/BeautyNBeast/pattern.beautyNBeast.eng.md) unit testing pattern
-- [PhpBeast](hhttps://github.com/lingtalfi/PhpBeast): This is a php implementation of the Beast component of the [Beauty n Beast pattern](https://github.com/lingtalfi/Dreamer/blob/master/UnitTesting/BeautyNBeast/pattern.beautyNBeast.eng.md)
+- [PhpBeast](https://github.com/lingtalfi/PhpBeast): This is a php implementation of the Beast component of the [Beauty n Beast pattern](https://github.com/lingtalfi/Dreamer/blob/master/UnitTesting/BeautyNBeast/pattern.beautyNBeast.eng.md)
 
 
 
