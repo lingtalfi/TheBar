@@ -38,7 +38,7 @@ Bloggers
 
 Console
 ----------
-- [CommandLineManiac](https://github.com/lingtalfi/universe/tree/master/planets/CommandLineManiac): Tools for command line scripts written in php
+- [CommandLineManiac](https://github.com/lingtalfi/CommandLineManiac): Tools for command line scripts written in php
 
 
 
