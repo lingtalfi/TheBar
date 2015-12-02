@@ -80,12 +80,14 @@ Log
 Multi-purpose 
 --------------
 - [Bat](https://github.com/lingtalfi/Bat): multi-purpose library of tools
+- [Bate](https://github.com/lingtalfi/Bate): multi-purpose library of tools, extension of [Bat](https://github.com/lingtalfi/Bat)
 
 
 Notation (custom notations)
 --------------
 - [NotationFan](https://github.com/lingtalfi/NotationFan): contains an implementation of the [id filter notation](https://github.com/lingtalfi/NotationFan/blob/master/IdFilter/notation.idFilter.eng.md)
 - [Ornella](https://github.com/lingtalfi/Ornella): notation for replacing {tags} with a customized value 
+- [Tiphaine](https://github.com/lingtalfi/Tiphaine): Tool for converting a string to a mixed value, using tiphaine notation
 
 
 
@@ -99,10 +101,23 @@ Sitemap
 - [SitemapSlicer](https://github.com/lingtalfi/SitemapSlicer): Generate a sitemap index and its related sitemaps using data from your database
 
 
+String 
+----------
+- [Escaper](https://github.com/lingtalfi/Escaper): A tool helping with string escaping
+- [Quoter](https://github.com/lingtalfi/Quoter): Utilities to manipulate quotes
+- [Tiphaine](https://github.com/lingtalfi/Tiphaine): Tool for converting a string to a mixed value, using tiphaine notation
+- [WrappedString](https://github.com/lingtalfi/WrappedString): Low level utilities to work with wrapped strings
+
+
 Testing
 ----------
 - [Beauty](https://github.com/lingtalfi/Beauty): An implementation of the beauty part of the [beauty'n'beast](https://github.com/lingtalfi/Dreamer/blob/master/UnitTesting/BeautyNBeast/pattern.beautyNBeast.eng.md) unit testing pattern
 - [PhpBeast](https://github.com/lingtalfi/PhpBeast): This is a php implementation of the Beast component of the [Beauty n Beast pattern](https://github.com/lingtalfi/Dreamer/blob/master/UnitTesting/BeautyNBeast/pattern.beautyNBeast.eng.md)
+
+
+Web
+--------
+- [UrlFriendlyListHelper](https://github.com/lingtalfi/UrlFriendlyListHelper): Utility to handle pagination, sort and search in your html lists
 
 
 
