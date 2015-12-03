@@ -32,8 +32,9 @@ Bloggers
 - [ConventionGuy](https://github.com/lingtalfi/ConventionGuy): a guy who likes conventions
 - [Dreamer](https://github.com/lingtalfi/Dreamer): that dude thinks he can predict the future
 - [Observer](https://github.com/lingtalfi/Observer): the oldest blogger of the universe I know of
-- [TheScientist](https://github.com/lingtalfi/TheScientist): the author of the famous [bigbang script](https://github.com/lingtalfi/TheScientist/blob/master/bigbang/bigbang.php) and the [portable autoloader technique](https://github.com/lingtalfi/TheScientist/blob/master/convention.portableAutoloader.eng.md)
+- [TheAnarchist](https://github.com/lingtalfi/TheAnarchist): blog from a random php dev
 - [TheBar](https://github.com/lingtalfi/TheBar): that's my crew
+- [TheScientist](https://github.com/lingtalfi/TheScientist): the author of the famous [bigbang script](https://github.com/lingtalfi/TheScientist/blob/master/bigbang/bigbang.php) and the [portable autoloader technique](https://github.com/lingtalfi/TheScientist/blob/master/convention.portableAutoloader.eng.md)
 
 
 Console
