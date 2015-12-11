@@ -68,6 +68,7 @@ Formatting
 - [ArrayToTable](https://github.com/lingtalfi/ArrayToTable): Create an html table from a php array
 - [MysqlTabular](https://github.com/lingtalfi/MysqlTabular): Generate a mysql table with the "console" format
 - [ReflectionRepresentation](https://github.com/lingtalfi/ReflectionRepresentation): Class to help with representation of \Reflection elements
+- [StringTool](https://github.com/lingtalfi/StringFormatter): Tool to format string
 
 
 Log 
@@ -106,6 +107,7 @@ String
 ----------
 - [Escaper](https://github.com/lingtalfi/Escaper): A tool helping with string escaping
 - [Quoter](https://github.com/lingtalfi/Quoter): Utilities to manipulate quotes
+- [StringTool](https://github.com/lingtalfi/StringFormatter): Tool to format string
 - [Tiphaine](https://github.com/lingtalfi/Tiphaine): Tool for converting a string to a mixed value, using tiphaine notation
 - [WrappedString](https://github.com/lingtalfi/WrappedString): Low level utilities to work with wrapped strings
 
