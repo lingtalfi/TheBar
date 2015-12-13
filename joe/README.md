@@ -142,3 +142,9 @@ Library
 - [JQuery](https://github.com/lingtalfi/JQuery): Some compressed Jquery libraries
 - [Pea](https://github.com/lingtalfi/Pea): Php like functions in js
 
+Plugins
+----------
+- [videojs-ad-markers](https://github.com/lingtalfi/videojs-ad-markers): Plugin for videojs which provides basic functionality to implement an advertising system
+- [videojs-swapping-playlist](https://github.com/lingtalfi/videojs-swapping-playlist): Plugin for videojs which provides playlist with no latency in between videos
+- [fullcalendar-php-services](https://github.com/lingtalfi/fullcalendar-php-services): Php implementation of fullcalendar basic interactions
+
