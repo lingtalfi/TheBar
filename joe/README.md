@@ -87,6 +87,7 @@ Multi-purpose
 
 Notation (custom notations)
 --------------
+- [IndentedLines](https://github.com/lingtalfi/IndentedLines): convert lists in indentedLines format to php arrays
 - [NotationFan](https://github.com/lingtalfi/NotationFan): contains an implementation of the [id filter notation](https://github.com/lingtalfi/NotationFan/blob/master/IdFilter/notation.idFilter.eng.md)
 - [Ornella](https://github.com/lingtalfi/Ornella): notation for replacing {tags} with a customized value 
 - [Tiphaine](https://github.com/lingtalfi/Tiphaine): Tool for converting a string to a mixed value, using tiphaine notation
