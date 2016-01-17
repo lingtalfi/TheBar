@@ -18,7 +18,8 @@ Php
 Array 
 --------------
 - [ArrayToString](https://github.com/lingtalfi/ArrayToString): Utility to export a php array in various string formats 
-- [ArrayToTable](https://github.com/lingtalfi/ArrayToTable): Create an html table from a php array 
+- [ArrayToTable](https://github.com/lingtalfi/ArrayToTable): Create an html table from a php array
+- [BabyDash](https://github.com/lingtalfi/BabyDash): notation to write an array in a language independent manner
 
 
 
@@ -60,6 +61,7 @@ FileSystem
 
 - [CopyDir](https://github.com/lingtalfi/CopyDir): Utility to copy a dir recursively
 - [DirScanner](https://github.com/lingtalfi/DirScanner): Utility to scan a directory recursively and do something on every entry
+- [UniqueNameGenerator](https://github.com/lingtalfi/UniqueNameGenerator): Tool to generate unique names
 
 
 
@@ -69,6 +71,11 @@ Formatting
 - [MysqlTabular](https://github.com/lingtalfi/MysqlTabular): Generate a mysql table with the "console" format
 - [ReflectionRepresentation](https://github.com/lingtalfi/ReflectionRepresentation): Class to help with representation of \Reflection elements
 - [StringTool](https://github.com/lingtalfi/StringFormatter): Tool to format string
+
+
+Image
+--------------
+- [ThumbnailTools](https://github.com/lingtalfi/ThumbnailTools): Tool for manipulating thumbnails
 
 
 Log 
@@ -83,10 +90,12 @@ Multi-purpose
 --------------
 - [Bat](https://github.com/lingtalfi/Bat): multi-purpose library of tools
 - [Bate](https://github.com/lingtalfi/Bate): multi-purpose library of tools, extension of [Bat](https://github.com/lingtalfi/Bat)
+- [TokenFun](https://github.com/lingtalfi/TokenFun): Tools for playing with php tokens
 
 
 Notation (custom notations)
 --------------
+- [BabyDash](https://github.com/lingtalfi/BabyDash): notation to write an array in a language independent manner
 - [IndentedLines](https://github.com/lingtalfi/IndentedLines): convert lists in indentedLines format to php arrays
 - [NotationFan](https://github.com/lingtalfi/NotationFan): contains an implementation of the [id filter notation](https://github.com/lingtalfi/NotationFan/blob/master/IdFilter/notation.idFilter.eng.md)
 - [Ornella](https://github.com/lingtalfi/Ornella): notation for replacing {tags} with a customized value 
@@ -119,10 +128,27 @@ Testing
 - [PhpBeast](https://github.com/lingtalfi/PhpBeast): This is a php implementation of the Beast component of the [Beauty n Beast pattern](https://github.com/lingtalfi/Dreamer/blob/master/UnitTesting/BeautyNBeast/pattern.beautyNBeast.eng.md)
 
 
+Tokens
+--------
+- [TokenFun](https://github.com/lingtalfi/TokenFun): Tools for playing with php tokens
+
+
+
 Web
 --------
+- [Colis](https://github.com/lingtalfi/Colis): an input form control connected to a library of user items
+- [GetFileSize](https://github.com/lingtalfi/GetFileSize): Php service to get the size of the file
+- [Meredith](https://github.com/lingtalfi/Meredith): Php plugin for implementing a crud strategy based on the jquery datatables plugin
 - [Tim](https://github.com/lingtalfi/Tim): Protocol (and tools) to help with communication between a client and a server
+- [Uploader](https://github.com/lingtalfi/Uploader): Helps implementing a server side service to handle file uploads
+- [UploaderHandler](https://github.com/lingtalfi/UploaderHandler): A tool to help implementing an upload server (with or without chunking)
 - [UrlFriendlyListHelper](https://github.com/lingtalfi/UrlFriendlyListHelper): Utility to handle pagination, sort and search in your html lists
+
+
+
+YouTube
+------------
+- [YouTubeUtils](https://github.com/lingtalfi/YouTubeUtils): Tools to manipulate Youtube Apis
 
 
 
@@ -143,9 +169,25 @@ Library
 - [JQuery](https://github.com/lingtalfi/JQuery): Some compressed Jquery libraries
 - [Pea](https://github.com/lingtalfi/Pea): Php like functions in js
 
+
+
+
 Plugins
 ----------
+- [Colis](https://github.com/lingtalfi/Colis): an input form control connected to a library of user items
+- [JGoodies](https://github.com/lingtalfi/JGoodies): Some functions for jQuery/javascript
+- [JqueryUrlWithDropZone](https://github.com/lingtalfi/JqueryUrlWithDropZone): A jquery based snippet to create a form control consisting of an input text and a dropzone
+- [fullcalendar-php-services](https://github.com/lingtalfi/fullcalendar-php-services): Php implementation of fullcalendar basic interactions
+- [Meredith](https://github.com/lingtalfi/Meredith): Php plugin for implementing a crud strategy based on the jquery datatables plugin
 - [videojs-ad-markers](https://github.com/lingtalfi/videojs-ad-markers): Plugin for videojs which provides basic functionality to implement an advertising system
 - [videojs-swapping-playlist](https://github.com/lingtalfi/videojs-swapping-playlist): Plugin for videojs which provides playlist with no latency in between videos
-- [fullcalendar-php-services](https://github.com/lingtalfi/fullcalendar-php-services): Php implementation of fullcalendar basic interactions
+
+
+StandAlone objects
+----------
+- [SelectChain](https://github.com/lingtalfi/SelectChain): A simple javascript object to handle a select chain
+
+
+
+
 
