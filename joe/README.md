@@ -56,11 +56,18 @@ Debug
 - [ReflectionRepresentation](https://github.com/lingtalfi/ReflectionRepresentation): Class to help with representation of \Reflection elements
 - [VariableToString](https://github.com/lingtalfi/VariableToString): Utility to write any php variable to a string representation
 
+
+Design
+-----------
+- [SuspiciousException](https://github.com/lingtalfi/SuspiciousException): This is an interface for the suspicious exception paradigm
+
+
 FileSystem 
 --------------
 
 - [CopyDir](https://github.com/lingtalfi/CopyDir): Utility to copy a dir recursively
 - [DirScanner](https://github.com/lingtalfi/DirScanner): Utility to scan a directory recursively and do something on every entry
+- [MikeMagicTools](https://github.com/lingtalfi/MikeMagicTools): set of various tools
 - [UniqueNameGenerator](https://github.com/lingtalfi/UniqueNameGenerator): Tool to generate unique names
 
 
@@ -90,6 +97,7 @@ Multi-purpose
 --------------
 - [Bat](https://github.com/lingtalfi/Bat): multi-purpose library of tools
 - [Bate](https://github.com/lingtalfi/Bate): multi-purpose library of tools, extension of [Bat](https://github.com/lingtalfi/Bat)
+- [MikeMagicTools](https://github.com/lingtalfi/MikeMagicTools): set of various tools
 - [TokenFun](https://github.com/lingtalfi/TokenFun): Tools for playing with php tokens
 
 
@@ -136,8 +144,10 @@ Tokens
 
 Web
 --------
+- [AssetLoader](https://github.com/lingtalfi/AssetLoader): Load assets (js/css) in your html page
 - [Colis](https://github.com/lingtalfi/Colis): an input form control connected to a library of user items
 - [GetFileSize](https://github.com/lingtalfi/GetFileSize): Php service to get the size of the file
+- [HtmlTemplate](https://github.com/lingtalfi/HtmlTemplate): A simple template system to work with jquery
 - [Meredith](https://github.com/lingtalfi/Meredith): Php plugin for implementing a crud strategy based on the jquery datatables plugin
 - [Tim](https://github.com/lingtalfi/Tim): Protocol (and tools) to help with communication between a client and a server
 - [Uploader](https://github.com/lingtalfi/Uploader): Helps implementing a server side service to handle file uploads
@@ -172,20 +182,30 @@ Library
 
 
 
-Plugins
+Plugins And other Jquery tools
 ----------
 - [Colis](https://github.com/lingtalfi/Colis): an input form control connected to a library of user items
+- [fullcalendar-php-services](https://github.com/lingtalfi/fullcalendar-php-services): Php implementation of fullcalendar basic interactions
+- [Here](https://github.com/lingtalfi/Here): Helper to represent events on an horizontal timeline
+- [HtmlTemplate](https://github.com/lingtalfi/HtmlTemplate): A simple template system to work with jquery
+- [InstantLog](https://github.com/lingtalfi/InstantLog): A quick log tool for your php apps
 - [JGoodies](https://github.com/lingtalfi/JGoodies): Some functions for jQuery/javascript
 - [JqueryUrlWithDropZone](https://github.com/lingtalfi/JqueryUrlWithDropZone): A jquery based snippet to create a form control consisting of an input text and a dropzone
-- [fullcalendar-php-services](https://github.com/lingtalfi/fullcalendar-php-services): Php implementation of fullcalendar basic interactions
+- [Lys](https://github.com/lingtalfi/Lys): Another infinite scroll jquery plugin
 - [Meredith](https://github.com/lingtalfi/Meredith): Php plugin for implementing a crud strategy based on the jquery datatables plugin
+- [SelectChain](https://github.com/lingtalfi/SelectChain): A simple javascript object to handle a select chain
 - [videojs-ad-markers](https://github.com/lingtalfi/videojs-ad-markers): Plugin for videojs which provides basic functionality to implement an advertising system
 - [videojs-swapping-playlist](https://github.com/lingtalfi/videojs-swapping-playlist): Plugin for videojs which provides playlist with no latency in between videos
+- [Zoli](https://github.com/lingtalfi/Zoli): Zolipop is a modal dialog
 
 
-StandAlone objects
-----------
-- [SelectChain](https://github.com/lingtalfi/SelectChain): A simple javascript object to handle a select chain
+
+
+
+
+
+
+
 
 
 
