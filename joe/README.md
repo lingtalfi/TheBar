@@ -149,6 +149,7 @@ Web
 - [GetFileSize](https://github.com/lingtalfi/GetFileSize): Php service to get the size of the file
 - [HtmlTemplate](https://github.com/lingtalfi/HtmlTemplate): A simple template system to work with jquery
 - [Meredith](https://github.com/lingtalfi/Meredith): Php plugin for implementing a crud strategy based on the jquery datatables plugin
+- [PhpTemplate](https://github.com/lingtalfi/PhpTemplate): Simple php template system
 - [Tim](https://github.com/lingtalfi/Tim): Protocol (and tools) to help with communication between a client and a server
 - [Uploader](https://github.com/lingtalfi/Uploader): Helps implementing a server side service to handle file uploads
 - [UploaderHandler](https://github.com/lingtalfi/UploaderHandler): A tool to help implementing an upload server (with or without chunking)
