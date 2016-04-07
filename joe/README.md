@@ -180,6 +180,7 @@ Library
 ----------
 - [JQuery](https://github.com/lingtalfi/JQuery): Some compressed Jquery libraries
 - [Pea](https://github.com/lingtalfi/Pea): Php like functions in js
+- [JCookie](https://github.com/lingtalfi/JCookie): A javascript library to handle cookies
 
 
 
