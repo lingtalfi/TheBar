@@ -84,6 +84,7 @@ Formatting
 Image
 --------------
 - [ThumbnailTools](https://github.com/lingtalfi/ThumbnailTools): Tool for manipulating thumbnails
+- [Ffmpeg](https://github.com/lingtalfi/Ffmpeg): A ffmpeg wrapper for php
 
 
 Log 
@@ -181,6 +182,7 @@ Library
 - [JQuery](https://github.com/lingtalfi/JQuery): Some compressed Jquery libraries
 - [Pea](https://github.com/lingtalfi/Pea): Php like functions in js
 - [JCookie](https://github.com/lingtalfi/JCookie): A javascript library to handle cookies
+- [jVideoPlayer](https://github.com/lingtalfi/jVideoPlayer): A javascript library to help building a video player
 
 
 
@@ -200,9 +202,6 @@ Plugins And other Jquery tools
 - [videojs-ad-markers](https://github.com/lingtalfi/videojs-ad-markers): Plugin for videojs which provides basic functionality to implement an advertising system
 - [videojs-swapping-playlist](https://github.com/lingtalfi/videojs-swapping-playlist): Plugin for videojs which provides playlist with no latency in between videos
 - [Zoli](https://github.com/lingtalfi/Zoli): Zolipop is a modal dialog
-
-
-
 
 
 
