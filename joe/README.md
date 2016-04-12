@@ -58,6 +58,14 @@ Debug
 - [VariableToString](https://github.com/lingtalfi/VariableToString): Utility to write any php variable to a string representation
 
 
+Deployment
+--------------
+
+- [Linker](https://github.com/lingtalfi/Linker): Tool to help manage application symlinks
+
+
+
+
 Design
 -----------
 - [SuspiciousException](https://github.com/lingtalfi/SuspiciousException): This is an interface for the suspicious exception paradigm
