@@ -213,7 +213,10 @@ Plugins And other Jquery tools
 
 
 
+Notes
+----------
 
+- [JsCheatSheet](https://github.com/lingtalfi/jscheatsheet): Some js code that I use more often than not
 
 
 
