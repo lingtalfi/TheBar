@@ -217,6 +217,7 @@ Notes
 ----------
 
 - [JsCheatSheet](https://github.com/lingtalfi/jscheatsheet): Some js code that I use more often than not
+- [Server notes](https://github.com/lingtalfi/server-notes): Some personal notes about vps
 
 
 
