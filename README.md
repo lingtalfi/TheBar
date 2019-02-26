@@ -23,3 +23,9 @@ Using the [uni](https://github.com/lingtalfi/universe-naive-importer) command.
 uni import TheBar
 ```
 
+History Log
+===============
+
+- 1.0.0 -- 2015-11-03
+
+    - initial commit
