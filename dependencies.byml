@@ -1,2 +1,4 @@
-dependencies: []
+dependencies: 
+    ling: []
+
 post_install: []
