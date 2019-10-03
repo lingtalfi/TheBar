@@ -266,9 +266,12 @@ My recommendations
 -------
 
 In a light app, I'll suggest this:
+
+```txt 
 - app/
 ----- www/              the web root directory
 ----- user-data/        the root for all data uploaded by users
+```
 
 
 
