@@ -1,0 +1,4 @@
+https://github.com/lingtalfi/TheBar/blob/master/DevicesResolutions/devices-resolutions.md
+https://github.com/lingtalfi/TheBar/blob/master/README.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/secure-file-upload.md
+https://github.com/lingtalfi/TheBar/blob/master/joe/README.md

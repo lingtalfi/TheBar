@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03
+2015-11-03 
 
 
 
@@ -10,6 +10,7 @@ Listen to some of our customer's stories.
 
 - [Joe's Corner](https://github.com/lingtalfi/TheBar/blob/master/joe/README.md): tells you about how the universe should be organized
 - [DevicesResolutions](https://github.com/lingtalfi/TheBar/blob/master/DevicesResolutions/devices-resolutions.md): devices resolutions cheat sheet
+- [Secure file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/secure-file-upload.md): a discussion about secure file upload
 
 
 
@@ -26,6 +27,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.1.0 -- 2019-10-03
+
+    - add secure file upload discussion
+    
 - 1.0.0 -- 2015-11-03
 
     - initial commit
