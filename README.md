@@ -28,6 +28,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.2.2 -- 2019-10-16
+
+    - add precision to recommendation in secure file upload
+    
 - 1.2.1 -- 2019-10-16
 
     - add link to disussion

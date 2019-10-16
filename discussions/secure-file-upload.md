@@ -262,7 +262,10 @@ My recommendations
 ==============
 
 
-1. Upload all the user files outside the web root directory.
+1. Upload all the user files outside the web root directory, and serve them using a virtual controller that 
+uses file_get_contents (i.e. not include), so that the php code in it is never executed.
+
+
 -------
 
 In a light app, I'll suggest this:
