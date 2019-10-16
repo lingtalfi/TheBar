@@ -28,6 +28,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.2.1 -- 2019-10-16
+
+    - add link to disussion
+    
 - 1.2.0 -- 2019-10-16
 
     - add preventing path traversal attacks discussion

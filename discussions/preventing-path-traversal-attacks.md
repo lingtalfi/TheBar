@@ -302,5 +302,6 @@ if ($realUserPath === false || strpos($realUserPath, $realBase) !== 0) {
 ```
 
 
+I made a method out of it: [FileSystemTool::isDirectoryTraversalSafe](https://github.com/lingtalfi/Bat/blob/master/FileSystemTool.md#isdirectorytraversalsafe).
 
  
