@@ -12,6 +12,7 @@ Summary
 - [Hacking ourselves tutorial](#hacking-ourselves-tutorial)
 - [My recommendations](#my-recommendations)
 - [Sources](#sources)
+- [Related](#related)
 
 
 
@@ -328,3 +329,12 @@ Sources
 - https://www.owasp.org/index.php/Unrestricted_File_Upload
 - https://www.electrictoolbox.com/disable-php-apache-htaccess/
 - https://medium.com/@Aptive/local-file-inclusion-lfi-web-application-penetration-testing-cc9dc8dd3601
+
+
+
+
+Related
+============
+- [Ajax file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md): a discussion about ajax file upload
+
+
