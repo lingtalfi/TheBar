@@ -29,6 +29,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.3.1 -- 2019-10-17
+
+    - add comment to secure file upload discussion
+    
 - 1.3.0 -- 2019-10-17
 
     - add ajax file upload

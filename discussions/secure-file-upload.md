@@ -278,6 +278,9 @@ In a light app, I'll suggest this:
 ```
 
 
+An example of such a virtual server can be found in the [Light_UserData](https://github.com/lingtalfi/Light_UserData) plugin (from the [Light](https://github.com/lingtalfi/Light) framework).
+
+
 
 2. Implement a blacklist of forbidden filenames
 ---------
