@@ -75,11 +75,41 @@ The drawbacks:
         and use a virtual server to serve them, which ensures that the potential code inside the files is never executed.
         You do that by reading the content of it and sending it to the browser (i.e. never include the content, which
         would execute it, but read it and display it). 
+        
+        
+- there is another well-known drawback, but it has a fix. See the "2 steps validation process" section below for more details.        
          
 
 
 So I hope this makes you aware of the file weight problem, in case you weren't already.
 
+
+
+
+
+2 steps validation process
+-----------------------
+2019-10-21 
+
+The 2 steps validation process is a workaround a well-known problem that arises when one implements an ajax file upload system using **symbolic file names** (see the above section for more details).
+When you use an ajax form with symbolic file names, each time you upload a file, the file gets overwritten.
+
+So for instance, if the user fills a profile form, and the symbolic file name for the avatar picture is **images/avatar.png**, 
+then every time the user uploads a new avatar, the user file (ending with **images/avatar.png**) will be overwritten.
+
+This is a problem, because the user didn't get a chance to submit the form, and yet the avatar is already written to the file system.
+This means the user can't cancel and gets his/her old avatar back. That's the problem. 
+
+Therefore, I introduce a simple fix called **2 steps validation process**.
+
+The idea is the following:
+
+- when the user uploads an avatar which symbolic file name is **images/avatar.png**, then a file is first created, which name is **images/avatar.2svp.png**
+    The 2svp extension indicates that this file is temporary and is awaiting for a validation phase.
+    Note that the user can changes her mind and upload a new avatar as many times as she wants, the same **images/avatar.2svp.png** will be overwritten.
+- then in the end, the user posts the form. We basically simply remove the **2svp** extension from the file.
+        Note: this might also include other operations such as updating a database, depending on the application.
+        
 
 
 

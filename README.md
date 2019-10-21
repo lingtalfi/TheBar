@@ -29,6 +29,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.4.0 -- 2019-10-21
+
+    - adding 2svp section to ajax file upload discussion
+    
 - 1.3.1 -- 2019-10-17
 
     - add comment to secure file upload discussion
