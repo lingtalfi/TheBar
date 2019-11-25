@@ -1,6 +1,7 @@
 https://github.com/lingtalfi/TheBar/blob/master/DevicesResolutions/devices-resolutions.md
 https://github.com/lingtalfi/TheBar/blob/master/README.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/preventing-path-traversal-attacks.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/secure-file-upload.md
 https://github.com/lingtalfi/TheBar/blob/master/joe/README.md

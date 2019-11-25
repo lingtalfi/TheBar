@@ -13,6 +13,7 @@ Listen to some of our customer's stories.
 - [Secure file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/secure-file-upload.md): a discussion about secure file upload
 - [Ajax file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md): a discussion about ajax file upload
 - [Preventing path traversal attacks](https://github.com/lingtalfi/TheBar/blob/master/discussions/preventing-path-traversal-attacks.md): a discussion about directory traversal attacks and how to prevent them in php
+- [Iframe signal](https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md): a discussion about the iframe signal technique
 
 
 
@@ -29,6 +30,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.5.0 -- 2019-11-25
+
+    - add iframe signal discussion
+    
 - 1.4.0 -- 2019-10-21
 
     - adding 2svp section to ajax file upload discussion
