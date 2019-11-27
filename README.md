@@ -14,6 +14,7 @@ Listen to some of our customer's stories.
 - [Ajax file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md): a discussion about ajax file upload
 - [Preventing path traversal attacks](https://github.com/lingtalfi/TheBar/blob/master/discussions/preventing-path-traversal-attacks.md): a discussion about directory traversal attacks and how to prevent them in php
 - [Iframe signal](https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md): a discussion about the iframe signal technique
+- [php session security](https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md): a discussion about php session security
 
 
 
@@ -30,6 +31,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.6.0 -- 2019-11-27
+
+    - add php session security discussion
+    
 - 1.5.0 -- 2019-11-25
 
     - add iframe signal discussion
