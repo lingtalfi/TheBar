@@ -90,10 +90,12 @@ The behaviour of the multiplier technique is defined by the following array:
 - multiplier:
     - column: string, the name of the multiplier column
     - update_cleaner: array:
-        - table: mixed, the name of the table used in the **deleteQuery** (see the notes below).
+        - table: mixed, the name of the table used in the **deleteQuery** (see the notes below)
         - column: string, the name of the column used in the **deleteQuery** (see notes below)
         - value: mixed, the value of the column to use in the **deleteQuery** (see the notes below)
-    - ?ignore_duplicate: bool=true, whether to ignore duplicates on inserts (and/or updates)
+    - ?replace_duplicate: bool=true, whether to replace duplicates on inserts (and/or updates).
+                        This is used to update the **status** column with the new value in our example.
+                        If false, the sql query will use **insert** instead of **replace**. 
     
     
 The **deleteQuery** is used to clean the records before new ones can be inserted (in an update operation, as we've seen before).
