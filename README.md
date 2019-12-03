@@ -31,6 +31,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.7.5 -- 2019-12-03
+
+    - update form multiplier discussion, removed update_cleaner.table, as its implicit
+    
 - 1.7.4 -- 2019-12-03
 
     - update form multiplier discussion, add important note about replace_duplicate
