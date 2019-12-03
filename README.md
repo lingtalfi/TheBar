@@ -15,6 +15,7 @@ Listen to some of our customer's stories.
 - [Preventing path traversal attacks](https://github.com/lingtalfi/TheBar/blob/master/discussions/preventing-path-traversal-attacks.md): a discussion about directory traversal attacks and how to prevent them in php
 - [Iframe signal](https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md): a discussion about the iframe signal technique
 - [php session security](https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md): a discussion about php session security
+- [form multiplier trick](https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md): a discussion about php session security
 
 
 
@@ -30,7 +31,7 @@ uni import Ling/TheBar
 
 History Log
 ===============
-
+    
 - 1.7.6 -- 2019-12-03
 
     - update form multiplier discussion, update_cleaner becomes update_cleaner_column, as the value can be guessed from the context
