@@ -31,6 +31,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.7.0 -- 2019-12-03
+
+    - add form multiplier discussion
+    
 - 1.6.0 -- 2019-11-27
 
     - add php session security discussion
