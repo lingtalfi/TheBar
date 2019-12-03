@@ -31,6 +31,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.7.2 -- 2019-12-03
+
+    - update form multiplier discussion, make multiplier array more portable
+    
 - 1.7.1 -- 2019-12-03
 
     - update form multiplier discussion, add ignore_duplicate option
