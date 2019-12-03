@@ -96,7 +96,13 @@ The behaviour of the multiplier technique is defined by the following array:
     - ?replace_duplicate: bool=true, whether to replace duplicates on inserts (and/or updates).
                         This is used to update the **status** column with the new value in our example.
                         If false, the sql query will use **insert** instead of **replace**. 
+                        Note that **replace** is only available in mysql (i.e. not traditional sql).
     
+    
+Important note: because the multiplier array uses the **replace_duplicate** option, it is mysql dependent.
+So if you want to port the multiplier array to work with another storage, you need to revisit this **replace_duplicate** option.
+
+
     
 The **deleteQuery** is used to clean the records before new ones can be inserted (in an update operation, as we've seen before).
 It's a sql query that looks like this:
