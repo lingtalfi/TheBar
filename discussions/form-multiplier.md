@@ -93,7 +93,8 @@ The behaviour of the multiplier technique is defined by the following array:
     - table: mixed, the name of the table used in the **deleteQuery** (see the notes below).
     - column: string, the name of the column used in the **deleteQuery** (see notes below)
     - value: mixed, the value of the column to use in the **deleteQuery** (see the notes below)
-        
+- ?ignore_duplicate: bool=true, whether to ignore duplicates on inserts (and/or updates)
+    
     
 The **deleteQuery** is used to clean the records before new ones can be inserted (in an update operation, as we've seen before).
 It's a sql query that looks like this:
