@@ -32,6 +32,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.8.0 -- 2019-12-05
+
+    - update form multiplier discussion, removed handling of update
+    
 - 1.7.6 -- 2019-12-03
 
     - update form multiplier discussion, update_cleaner becomes update_cleaner_column, as the value can be guessed from the context
