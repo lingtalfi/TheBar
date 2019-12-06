@@ -32,6 +32,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.8.1 -- 2019-12-06
+
+    - update form multiplier discussion, fine tuned parameters
+    
 - 1.8.0 -- 2019-12-05
 
     - update form multiplier discussion, removed handling of update

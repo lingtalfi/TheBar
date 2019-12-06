@@ -4,7 +4,7 @@ Form tricks: the multiplier
 
 
 
-The multiplier is a technique we can use to insert/update multiple rows in a database at once.
+The multiplier is a technique we can use to insert multiple rows in a database at once.
 
 It was first created to make more efficient editing for **has** tables (aka many to many table).
 
@@ -12,13 +12,12 @@ So for instance imagine we have the three tables: **user**, **permission_group**
 
 And now we want to edit the **has** table, which in this case is the **user_has_permission_group** table.
 
-With the multiplier, we can insert and/or edit multiple rows at once.
 
- 
+
 
 How does it work?
 
-Consider a row that you want to insert/update, like this one:
+Consider the following row:
 
 ```text
 - user_id: 5
@@ -53,10 +52,12 @@ So with our example row, if we were to insert it via a multiplier compliant medi
  
 
 
-That's for inserting rows. 
+That's it.
 
-The multiplier trick works only for forms in insert mode, it wouldn't work well with forms in update mode, because it would 
-be confusing as far as which value for the potential extra column (the "status" column in our example). 
+
+Note: at first I wanted to implement the update version of the multiplier, but I found out that it confusing for the user, so I dropped it.
+However, this can be done in a not confusing way using a multiple edit module, like the one implemented in phpmyadmin for instance.
+ 
 
 
 
@@ -64,8 +65,13 @@ be confusing as far as which value for the potential extra column (the "status" 
 The behaviour of the multiplier technique is defined by the following array:
 
 - multiplier:
-    - column: string, the name of the multiplier column
-    
+    - multiplier_column: the name of the multiplier column (in our example: group_id).
+    - ?insert_mode: string(insert|replace) = insert. 
+            The sql keyword used for inserting queries. This matters only in case of duplicate rows.
+            If you try to insert a row that already exists, what do you want to do:
+            
+            - reject the request (insert_mode=insert)
+            - replace the old record in the database with the new one (insert_mode=replace)
    
     
     
