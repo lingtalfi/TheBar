@@ -33,6 +33,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.9.2 -- 2019-12-09
+
+    - fix markdown formatting typo in webapp security checklist document
+    
 - 1.9.1 -- 2019-12-09
 
     - update webapp security checklist document, add csrf protection

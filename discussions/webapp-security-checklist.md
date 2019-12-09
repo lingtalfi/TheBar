@@ -18,6 +18,7 @@ with our "minimum security" level:
     - [Light_CsrfSession plugin](https://github.com/lingtalfi/Light_CsrfSession) (preferred because simpler to develop with)
     - [Light_CsrfSimple plugin](https://github.com/lingtalfi/Light_CsrfSimple) 
     - [Light_Csrf plugin](https://github.com/lingtalfi/Light_Csrf) 
+    
     Or otherwise, some other tools might help you:
     - [CSRFTools](https://github.com/lingtalfi/CSRFTools)
 
