@@ -33,6 +33,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.9.1 -- 2019-12-09
+
+    - update webapp security checklist document, add csrf protection
+    
 - 1.9.0 -- 2019-12-09
 
     - add webapp security checklist document

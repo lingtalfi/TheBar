@@ -14,6 +14,12 @@ Our checklist is composed of the following documents, which one must implement f
 with our "minimum security" level:
 
 - [php session security](https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md)
+- implement csrf protection for all forms and ajax actions. If you're using the Light framework, we recommend one of this plugins:
+    - [Light_CsrfSession plugin](https://github.com/lingtalfi/Light_CsrfSession) (preferred because simpler to develop with)
+    - [Light_CsrfSimple plugin](https://github.com/lingtalfi/Light_CsrfSimple) 
+    - [Light_Csrf plugin](https://github.com/lingtalfi/Light_Csrf) 
+    Or otherwise, some other tools might help you:
+    - [CSRFTools](https://github.com/lingtalfi/CSRFTools)
 
 
 
