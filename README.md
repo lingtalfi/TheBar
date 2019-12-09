@@ -16,6 +16,7 @@ Listen to some of our customer's stories.
 - [Iframe signal](https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md): a discussion about the iframe signal technique
 - [php session security](https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md): a discussion about php session security
 - [form multiplier trick](https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md): a discussion about php session security
+- [webapp security checklist](https://github.com/lingtalfi/TheBar/blob/master/discussions/webapp-security-checklist.md): a minimum security level checklist for web apps
 
 
 
@@ -31,6 +32,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.9.0 -- 2019-12-09
+
+    - add webapp security checklist document
     
 - 1.8.1 -- 2019-12-06
 
