@@ -17,6 +17,7 @@ Listen to some of our customer's stories.
 - [php session security](https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md): a discussion about php session security
 - [form multiplier trick](https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md): a discussion about php session security
 - [webapp security checklist](https://github.com/lingtalfi/TheBar/blob/master/discussions/webapp-security-checklist.md): a minimum security level checklist for web apps
+- [full ajax form](https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md): the full ajax form technique 
 
 
 
@@ -32,6 +33,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.10.0 -- 2019-12-12
+
+    - add full ajax form document
     
 - 1.9.2 -- 2019-12-09
 

@@ -3,6 +3,9 @@ Ajax file upload
 2019-10-17
 
 
+Note: this technique is now deprecated, use the [full ajax form technique](https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md) instead.
+
+
 
 Uploading file by ajax rather than using the traditional file input is cool, because it's more fancy,
 the user can see the result of his file directly, the developer can add progression bar, it's more interactive.
