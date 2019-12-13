@@ -55,7 +55,24 @@ of this discussion for now.
 
 
 So, I've not implemented the new technique yet, so let's get to work...     
+
+Before I do so, let me warn you before you implement this technique too: if you implement this technique with just one controller
+handling the whole form, you'll loose the ability to have progress bars on individual files uploaded, that's because for the progress bars,
+you need to call the controller once per file, so it's a trade off.
+
+If you really like progress bars, you still can use the **full ajax form technique**, but you'll need an extra controller 
+to handle uploads.
                          
+
+
+
+
+
+
+
+
+
+
 
 
 

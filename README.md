@@ -34,6 +34,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.10.1 -- 2019-12-13
+
+    - update full ajax form document, and un-deprecate ajax-file-upload technique
+    
 - 1.10.0 -- 2019-12-12
 
     - add full ajax form document
