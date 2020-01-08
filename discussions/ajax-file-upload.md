@@ -1,6 +1,6 @@
 Ajax file upload
 ================
-2019-10-17
+2019-10-17 -> 2020-01-08
 
 
 
@@ -23,17 +23,37 @@ For the server, as an example I've already implemented one helper tool here (as 
 - [Light_AjaxFileUploadManager](https://github.com/lingtalfi/Light_AjaxFileUploadManager)
 
 
+Now when a file is uploaded, it takes some space on the hard drive.
 
-And basically I just wanted to add one word: about the file name.
+How to deal with that?
 
-This even applies to regular static uploads (traditional upload in $_FILES).
+I thought of two methods:
 
-It's an idea that I call symbolic file names.
+- weight limit (recommended)
+- symbolic file names
+
+
+
+Weight limit
+----------
+2020-01-08
+
+Perhaps the most logical thing to do to avoid exceeding your hard drive weight maximum storage limit is to limit
+the upload storage per user.
+
+For instance, each user gets a maximum of 5M.
+
+
+That's actually the method I recommend now. The **symbolic file names** technique discussed below is my first attempt
+on trying to resolving this problem, but it's more complicated and so I don't like it. 
+
+
 
 
 
 Symbolic file names
 -------------------
+2019-10-17
 
 When you upload a file, it takes some space on your hard drive.
 If space matters for you, then you should be careful how many files a user should be allowed to upload,

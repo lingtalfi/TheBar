@@ -1,7 +1,17 @@
 Full ajax form
 ==================
-2019-12-12
+2019-12-12 -> 2020-01-08
 
+
+
+UPDATE 2020-01-08
+----
+I don't use this technique anymore, because I prefer to see the progress bars while a file is uploading.
+
+
+
+What is it?
+------
 
 
 It's probably just me, but so far I used the [ajax-file-upload technique](https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md) when my forms had some input files in them,
