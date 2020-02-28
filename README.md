@@ -18,6 +18,7 @@ Listen to some of our customer's stories.
 - [form multiplier trick](https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md): a discussion about php session security
 - [webapp security checklist](https://github.com/lingtalfi/TheBar/blob/master/discussions/webapp-security-checklist.md): a minimum security level checklist for web apps
 - [full ajax form](https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md): the full ajax form technique 
+- [database identity usurpation](https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md): a discussion about some database identity usurpation 
 
 
 
@@ -33,6 +34,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.11.1 -- 2020-01-08
+
+    - add link in README.md
     
 - 1.11.0 -- 2020-01-08
 
