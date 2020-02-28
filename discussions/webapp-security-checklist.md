@@ -21,6 +21,7 @@ with our "minimum security" level:
     
     Or otherwise, some other tools might help you:
     - [CSRFTools](https://github.com/lingtalfi/CSRFTools)
+- [database identity usurpation](https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md)
 
 
 

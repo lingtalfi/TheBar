@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 
+2015-11-03 -> 2020-02-28
 
 
 
@@ -33,6 +33,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.11.0 -- 2020-01-08
+
+    - add database-identity-usurpation discussion
     
 - 1.10.2 -- 2020-01-08
 
