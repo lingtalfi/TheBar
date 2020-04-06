@@ -88,7 +88,22 @@ use risky symbols, or you're on your own.
 
 
 
+Some tools
+==============
 
+
+I've created some tools that you can use to use the **panda headers** protocol right away.
+
+
+
+Server tools
+--------
+- [Panda Headers](https://github.com/lingtalfi/Panda_Headers)
+
+
+Client tools
+---------
+- [panda-headers js client](https://github.com/lingtalfi/Panda-headers-js)
 
 
 
