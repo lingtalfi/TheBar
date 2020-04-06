@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-02-28
+2015-11-03 -> 2020-04-06
 
 
 
@@ -19,6 +19,7 @@ Listen to some of our customer's stories.
 - [webapp security checklist](https://github.com/lingtalfi/TheBar/blob/master/discussions/webapp-security-checklist.md): a minimum security level checklist for web apps
 - [full ajax form](https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md): the full ajax form technique 
 - [database identity usurpation](https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md): a discussion about some database identity usurpation 
+- [panda-headers protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protocol.md): the panda-headers protocol 
 
 
 
@@ -34,6 +35,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.11.1 -- 2020-04-06
+
+    - add panda-headers-protocol
     
 - 1.11.1 -- 2020-01-08
 
