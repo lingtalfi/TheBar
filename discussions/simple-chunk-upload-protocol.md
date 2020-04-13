@@ -144,3 +144,12 @@ The server part is already handled (if you're using my server implementation ide
 
 
 
+
+
+Existing tools
+============
+
+- js clients:
+    - [chunk uploader](https://github.com/lingtalfi/js-chunk-uploader)
+
+
