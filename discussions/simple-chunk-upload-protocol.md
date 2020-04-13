@@ -73,7 +73,7 @@ $start = (int)$_POST['start'];
 $end = (int)$_POST['end'];
 $isLastChunk = (bool)($_POST['last_chunk']);
 
-$dst = '/my_app/www/tmp/' . $fileName;
+$dst = '/my_app/tmp/' . $fileName; // your application business rules here...
 $dstPartial = $dst . ".part";
 
 
