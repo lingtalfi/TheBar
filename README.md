@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-04-06
+2015-11-03 -> 2020-04-13
 
 
 
@@ -20,6 +20,8 @@ Listen to some of our customer's stories.
 - [full ajax form](https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md): the full ajax form technique 
 - [database identity usurpation](https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md): a discussion about some database identity usurpation 
 - [panda-headers protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protocol.md): the panda-headers protocol 
+- [simple chunk-upload protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md): the simple chunk upload protocol 
+ 
 
 
 
@@ -35,6 +37,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.12.0 -- 2020-04-13
+
+    - add simple-chunk-upload-protocol  
     
 - 1.11.1 -- 2020-04-06
 
