@@ -2,11 +2,14 @@ https://github.com/lingtalfi/TheBar/blob/master/DevicesResolutions/devices-resol
 https://github.com/lingtalfi/TheBar/blob/master/README.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protocol.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/preventing-path-traversal-attacks.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/secure-file-upload.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/webapp-security-checklist.md
 https://github.com/lingtalfi/TheBar/blob/master/joe/README.md
