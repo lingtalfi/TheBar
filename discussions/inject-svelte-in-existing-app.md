@@ -292,7 +292,7 @@ Let's create our **package.json**.
 
 ```
 
-If necessary, change the **sirv public** command to your webserver's root.
+If necessary, change the **sirv public** command to your webserver's root (for instance sirv www).
 
 
 Let's switch to the terminal and install the dependencies:
