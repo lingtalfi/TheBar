@@ -106,7 +106,7 @@ Now we need some js code to transform our target into our svelte component. Let'
 ```
 
 
-Notice that we added two things: the **bundle.js** in the head (we will create them later), 
+Notice that we added two things: the **bundle.js** in the head (we will create it later), 
 and the script at the bottom of the body, to effectively insert our **MyComponent** into the desired target.
 
 Note: optionally we can add a **bundle.css** link in the head if our svelte component actually uses some css styling, but for the sake
