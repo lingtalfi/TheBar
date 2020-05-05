@@ -23,6 +23,8 @@ Now the image editor capabilities are defined by the client alone and not part o
 
 In this document, **acp** means [ajax communication protocol](https://github.com/lingtalfi/AjaxCommunicationProtocol), which is a json based protocol.
 
+All actions, unless otherwise specified communicate via **acp**.
+
 
 
 How do the client and server communicate?
@@ -36,12 +38,24 @@ The available operations are:
 - delete: to delete a file owned by the user 
 - update: to update the information of a file owned by the user  
 - get_partial_size: to get the current size of a partially uploaded file
+- reset: to reset the virtual server (in case the server exposes a virtual server)
 
 
 In addition to that, the **urls** returned by the server on the **add** action must contain additional
 meta information described in the **file manager urls** section of this document, and the client must know how to treat this meta information.    
 
 
+
+
+
+reset 
+-------
+If your server uses a virtual file system, then the client must send the reset action to the server every time
+the page is reloaded, and/or when the user resets the gui (i.e. when he clicks the reset button of the form for instance).
+
+There is no particular payload for this operation.
+
+The server must then reset the virtual file system when it receives this command, and respond with any success alcp response.  
 
 
 
@@ -72,11 +86,11 @@ The data is passed via the POST method, multipart/form-data style (https://devel
 - useChunks: 0|1, whether to use the **chunk upload** mode or the **regular upload** mode.
 - file: the js File object to upload
 
-- ?name: the name of the file (otherwise the server might take a guess based on the uploaded file).
+- ?filename: the name of the file (otherwise the server might take a guess based on the uploaded file).
 - ?directory: the relative path of the directory which contains the file. 
 - ?tags: an array of tags to attach to the file
-- ?is_private: 0|1, whether the file should be private or public
-- ?keep_original: 0|1 (defaults to 0). If 1, the server will keep the original file in memory for later recalls (if it supports the "keepOriginalUrl" feature described later in this document). 
+- ?is_private: 0|1 (defaults to 0), whether the file should be private or public
+ 
 
 In **chunk upload** mode, the following properties must be added:
 
@@ -97,15 +111,19 @@ The file object can also be updated by the server (for instance if the server re
 
 
 The server's response uses the [ajax communication protocol](https://github.com/lingtalfi/AjaxCommunicationProtocol).
-In case of success, the json array contains the following properties.
+In case of a success, the json array contains the following properties.
 
 Remember that the server can change any information provided by the user (hence we provide the data).
 
    
+- is_fully_uploaded: 0|1. 0 means that this was just a chunk that was uploaded.
+    1 means the the full file has been uploaded (in a case of the chunk upload strategy, this means that all the chunks have been uploaded,
+    and the file has been rebuilt successfully on the server).
+    If the value is 0, all the other properties are not returned.  
 - url: the url to the uploaded file  
-- name: the name of the uploaded file  
+- filename: the name of the uploaded file  
 - directory: the directory path (relative to the user's directory) which contains the uploaded file  
-- tags: the tags attached to the uploaded file  
+- tags: the array of tags attached to the uploaded file  
 - is_private: whether the file is private or public
 
 
@@ -115,12 +133,39 @@ url) to update its visual representation in the gui.
 
 
 
+
+delete
+----------
+
+With this action, the client ask for the server to remove a resource from the server.
+
+
+The js client sends the following payload via post:
+
+- url: the url of the file to remove
+
+
+The server will respond with the regular **acp** response.
+
+
+
+
+
+
+
+
 update
 -------
 
-todo
-basically the same as add, but the file is optional too.
 
+This allows the client to update a resource on the server.
+
+The client must send the same parameters as with the **add** action, but with the following extra parameters:
+
+- url: string, the url of the resource to update
+
+
+The server will respond with a regular **acp** response.
 
 
 get_partial_size

@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-04-13
+2015-11-03 -> 2020-05-05
 
 
 
@@ -21,6 +21,7 @@ Listen to some of our customer's stories.
 - [database identity usurpation](https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md): a discussion about some database identity usurpation 
 - [panda-headers protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protocol.md): the panda-headers protocol 
 - [simple chunk-upload protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md): the simple chunk upload protocol 
+- [inject svelte in an existing app](https://github.com/lingtalfi/TheBar/blob/master/discussions/inject-svelte-in-existing-app.md): Inject a svelte component in an existing app 
  
 
 
@@ -37,6 +38,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.13.0 -- 2020-05-05
+
+    - add "inject svelte in an existing app" memo  
     
 - 1.12.0 -- 2020-04-13
 
