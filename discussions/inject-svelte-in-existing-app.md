@@ -262,7 +262,7 @@ Before we can execute rollup we need to install some packages.
 Let's create our **package.json**.
 
 
-**/myapp/package.json**
+**file: /myapp/package.json**
 
 ```js
 {
