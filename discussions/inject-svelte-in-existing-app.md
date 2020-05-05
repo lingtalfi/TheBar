@@ -304,7 +304,7 @@ npm install
 
 Now we shall be able to call rollup.
 
-We have to flavours, either use **npm run dev**, or use **npm run build**.
+We have to flavours (from our **package.json**), either use **npm run dev**, or use **npm run build**.
 
 Both commands will call rollup, but **npm run dev** will start an http server and auto-refresh the page when you save a file according to your rollup configuration (see number (4)).
 
