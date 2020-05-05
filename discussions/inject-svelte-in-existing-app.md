@@ -157,7 +157,7 @@ window.MyComponent = function (options) {
 ```
 
 Notice how this file creates a js global variable **MyComponent** and assigns the svelte component to it. 
-Thanks to that global variable we can now call our svelte component in **index.html**.
+It's that same global variable that we referenced from the **index.html**.
 
 
 
