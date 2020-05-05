@@ -161,7 +161,7 @@ It's that same global variable that we referenced from the **index.html**.
 
 
 
-Now how do we create the **bundle.js** file.
+Now how do we create the **bundle.js** file?
 
 
 Let's use **rollup**.
