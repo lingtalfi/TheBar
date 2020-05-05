@@ -319,7 +319,7 @@ npm run dev
 This will call rollup, which in turn will parse our **/myapp/public/my-component/src/main.js** file and
 create our bundle file(s) (js and optionally css).
 
-Additionally, an http server instance will be launched at url: http://localhost:5000/.
+Additionally, an http server instance will be launched at url: http://localhost:5000/ (by default).
 
 The svelte component now appears in our app.
 
