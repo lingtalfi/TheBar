@@ -131,7 +131,7 @@ First, let's talk a bit about structure. For this example, we will have this str
 --------- index.html                        (the index.html file that we created above)
 --------- my-component/
 ------------- src/            
------------------ MyComponent.svelte        (the MyComponent.svelted created above)
+----------------- MyComponent.svelte        (the MyComponent.svelte created above)
 ----------------- main.js                   ( a new file that we will create below)
 ------------- dist/
 ----------------- bundle.js                 (not created yet, but our goal is to create this file)
