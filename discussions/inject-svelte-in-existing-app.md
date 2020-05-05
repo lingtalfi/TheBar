@@ -140,7 +140,7 @@ First, let's talk a bit about structure. For this example, we will have this str
 
 
 
-So first let's create the **main.js** file, which will be used in the process:
+So first let's create the **main.js** file, which will be used in the process by our building tool (rollup):
 
 
 **file: /myapp/public/my-component/src/main.js**
