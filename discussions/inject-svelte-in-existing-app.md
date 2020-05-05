@@ -149,9 +149,7 @@ import SomeComponent from './MyComponent.svelte';
 
 
 window.MyComponent = function (options) {
-    return new SomeComponent({
-        target: options.target
-    });
+    return new SomeComponent(options);
 };
 
 ```
