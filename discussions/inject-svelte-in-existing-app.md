@@ -269,7 +269,7 @@ window.MyComponent = function (options) {
 
 ```
 
-This file is "required" by rollup.
+This file will be used by rollup (it's known at the entry point in rollup's terminology).
 
 Notice how this file creates a js global variable **MyComponent** and assigns the svelte component to it. 
 It's that same global variable that we referenced from the **index.html**.
