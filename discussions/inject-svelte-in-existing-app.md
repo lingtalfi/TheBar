@@ -428,7 +428,7 @@ npm install
 
 
 
-### rolling up our component
+### Rolling up our component
 
 At this point, all the packages we need are installed, and we can rollup our component.
 
