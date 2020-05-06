@@ -93,9 +93,7 @@ Create a svelte component
 
 Now that we have an html page, let's create a svelte component.
 
-We will create a very simple svelte component called **MyComponent**. You can put it where you want.
-For now, I'll put mine in a **my-component** directory (I recommend that you do the same for now,
-you can always change your mind later).
+We will create a very simple svelte component called **MyComponent**. Let's create a directory for it (you can put it wherever you want).
 
 
 ```bash
