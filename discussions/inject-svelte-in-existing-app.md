@@ -34,7 +34,7 @@ Summary
  * [The main.js file](#the-mainjs-file)
  * [The rollup configuration](#the-rollup-configuration)
  * [The package.json file](#the-packagejson-file)
- * [rolling up our component](#rolling-up-our-component)
+ * [Rolling up our component](#rolling-up-our-component)
 
 
 
