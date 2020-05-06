@@ -1,6 +1,6 @@
 Inject svelte in an existing html page
 ==============
-2020-05-05
+2020-05-05 -> 2020-05-06
 
 
 
@@ -19,14 +19,27 @@ This recipe assumes that:
 - you know how to open a terminal and install type some commands
 
 
-
-
 Let's get started.
 
 
+Summary
+---------
+* [Create a test folder for this recipe](#create-a-test-folder-for-this-recipe)
+* [Create an html page](#create-an-html-page)
+* [Create a svelte component](#create-a-svelte-component)
+* [Preparing the html page](#preparing-the-html-page)
+ * [Inject a target element in your html](#inject-a-target-element-in-your-html)
+* [The building of the component](#the-building-of-the-component)
+ * [structure overview](#structure-overview)
+ * [The main.js file](#the-mainjs-file)
+ * [The rollup configuration](#the-rollup-configuration)
+ * [The package.json file](#the-packagejson-file)
+ * [rolling up our component](#rolling-up-our-component)
 
 
-1. Create a test folder for this recipe
+
+
+Create a test folder for this recipe
 ---------
 
 Open a terminal:
@@ -48,7 +61,7 @@ cd public
 ```
 
 
-2. Create an html page
+Create an html page
 ---------
 
 
@@ -73,7 +86,7 @@ cd public
 
 
 
-2. Create a svelte component
+Create a svelte component
 --------
 
 Now that we have an html page, let's create a svelte component.
@@ -115,14 +128,14 @@ I'm a svelte component
 
 
 
-3. Preparing the html page
+Preparing the html page
 -----------
 
 Now that we have both an html page and a svelte component, how do you inject your svelte component in the html page?
 
 
 
-### 3.1. Inject a target element in your html
+### Inject a target element in your html
 
 
 What we would like to do is call an `<MyComponent>` tag directly in the html. 
@@ -209,6 +222,7 @@ The building of the component
 ---------------
 
 
+### structure overview
 First, let's talk a bit about structure. For this example, we will have this structure:
 
 
@@ -227,6 +241,8 @@ First, let's talk a bit about structure. For this example, we will have this str
 
 
 
+
+### The main.js file
 
 Now let's talk about the general strategy to build/compile our component into the **bundle.js** file.
 
@@ -255,6 +271,11 @@ This file will be required/used by rollup later.
 Notice how this file creates a js global variable **MyComponent** and assigns the svelte component to it. 
 It's that same global variable that we referenced from the **index.html**.
 
+
+
+
+
+### The rollup configuration
 
 And now the scary part: the rollup configuration!
 
@@ -348,11 +369,14 @@ function serve() {
 
 If you didn't use the same paths as I did, you might want to change the lines with the numbers (1), (2), (3) and (4).
 
-At this point, we are ready to execute rollup.
- 
 
+
+
+### The package.json file
+
+
+At this point, we are almost ready to execute rollup.
 Before we do so, let's install the packages required by rollup for a smooth execution. 
-
 
 Let's create our **package.json**.
 
@@ -398,6 +422,10 @@ Let's switch to the terminal and install the dependencies:
 cd /myapp
 npm install
 ```
+
+
+
+### rolling up our component
 
 At this point, all the packages we need are installed, and we can rollup our component.
 
