@@ -205,7 +205,7 @@ Let's update our **index.html** again.
 
 ```
 
-This won't work yet, but that's our goal.
+This won't work just yet, but it will in a few minutes.
 
 Notice that we added two things: the **bundle.js** reference in the head (we will create the actual file later), 
 and the script at the bottom of the body, to effectively insert our svelte component (**MyComponent**) into 
