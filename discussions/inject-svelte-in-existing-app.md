@@ -449,9 +449,10 @@ Additionally, an http server instance will be launched at url: http://localhost:
 The svelte component now appears in our app as expected.
 
 
-So that's it.
-That's one way of injecting some svelte component into your existing app.
+Not only that, but now when you update it in your code editor it will refresh automatically in the browser.
 
+
+So now, it's time to have fun with [svelte](https://svelte.dev/).
 
 
 
