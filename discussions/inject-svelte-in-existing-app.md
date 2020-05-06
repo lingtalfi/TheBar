@@ -252,7 +252,7 @@ Now let's talk about the general strategy to build/compile our component into th
 Fortunately for us, all the tools we need are already built for us.
 
 We will use a tool called [rollup](https://rollupjs.org/guide/en/), which has the ability to compile our svelte component
-into the **bundle.js** file.
+into the **bundle.js** file that we need.
 
 
 Create the following **main.js** file:
