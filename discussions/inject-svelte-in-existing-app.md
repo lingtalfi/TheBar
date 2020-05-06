@@ -1,23 +1,58 @@
-Inject svelte in an existing app
+Inject svelte in an existing html page
 ==============
 2020-05-05
 
 
-This is a memo for myself.
 
 
-So let's say you have a svelte component:
+When you first encounter a new technology, like **svelte** for instance, a natural thing to do is to inject it 
+in a simple html page to see how it fits.
+
+This is what we are going to do here.
+
+
+This recipe assumes that:
+
+- you know the basics of html, css and javascript
+- you know what a webserver is and you know how to spawn one
+- you have node installed on your machine and you know what package.json is
+- you know how to open a terminal and install type some commands
 
 
 
-**file: MyComponent.svelte**
-```html
-I'm a svelte component
+
+Let's get started.
+
+
+
+
+1. Create a test folder for this recipe
+---------
+
+Open a terminal:
+
+```bash 
+mkdir /myapp
+cd /myapp
 ```
 
-And an existing page:
+Of course, replace **myapp** with whatever directory you want. I will not mention such obvious things from now on.
 
-**file: index.html**
+
+We will also create a **public** directory, which will be our webserver's root directory.
+
+
+```bash
+mkdir public
+cd public
+```
+
+
+2. Create an html page
+---------
+
+
+**file: /myapp/public/index.html**
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -37,21 +72,70 @@ And an existing page:
 ```
 
 
-How do you inject your component in the html page?
 
-Surprisingly, at the time of writing this memo (2020-05-05), I didn't found a simple
-answer on the svelte website, hence this post.
+2. Create a svelte component
+--------
 
-Here is what I do (this might not be the recommended method).
+Now that we have an html page, let's create a svelte component.
 
-
-1. Inject a target in your app.
-
-Sounds obvious, but we can't inject directly the `<MyComponent>` tag in the html, because that's not valid html.
-Instead, we can inject a target element like this one: `<div id="my-component"></div>`:
+We will create a very simple svelte component called **MyComponent**. You can put it where you want.
+For now, I'll put mine in a **my-component** directory (I recommend that you do the same for now,
+you can always change your mind later).
 
 
-**file: index.html**
+```bash
+cd /myapp/public 
+mkdir my-component
+cd my-component
+```
+
+
+Also, inside our component's folder, we will create a **src** and a **dist** directory. 
+
+```bash 
+mkdir src
+mkdir dist
+cd src
+```
+
+
+The **src** directory will be used to put all our source code. And the **dist** directory will contain the compiled version
+of our source code (i.e. you need to compile a svelte component before you can use it in an html page, we will see how to compile
+later in this document).
+
+
+Now let's create our svelte component.
+
+
+**file: /myapp/public/my-component/src/MyComponent.svelte**
+
+```html
+I'm a svelte component
+```
+
+
+
+3. Preparing the html page
+-----------
+
+Now that we have both an html page and a svelte component, how do you inject your svelte component in the html page?
+
+
+
+### 3.1. Inject a target element in your html
+
+
+What we would like to do is call an `<MyComponent>` tag directly in the html. 
+Unfortunately that's not a valid html tag so it won't work.
+
+
+Instead, we can inject a target element like this one: `<div id="my-component"></div>`.
+
+Update your **index.html** file:
+
+
+**file: /myapp/public/index.html**
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -72,10 +156,12 @@ Instead, we can inject a target element like this one: `<div id="my-component"><
 
 ```
 
-Now we need some js code to transform our target into our svelte component. Let's add the js we would like:
+Now we need to transform our target into our svelte component. 
+
+Let's update our **index.html** again.
 
 
-**file: index.html**
+**file: /myapp/public/index.html**
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -105,16 +191,17 @@ Now we need some js code to transform our target into our svelte component. Let'
 
 ```
 
+Notice that we added two things: the **bundle.js** reference in the head (we will create the actual file later), 
+and the script at the bottom of the body, to effectively insert our svelte component (**MyComponent**) into 
+the desired target (`<div id="my-component"></div>`).
 
-Notice that we added two things: the **bundle.js** in the head (we will create it later), 
-and the script at the bottom of the body, to effectively insert our svelte component (**MyComponent**) into the desired target.
 
 Note: optionally we can add a **bundle.css** link in the head if our svelte component actually uses some css styling, but for the sake
 of simplicity we will ignore it for now.
   
 
-
-What's left to do at this point is create the **bundle.js** file which will connect our pieces together.
+But right now, this code won't work, because the **bundle.js** file doesn't exist.
+So in the next step we will create it, and the **index.html** will work as expected.
 
 
 
@@ -131,7 +218,7 @@ First, let's talk a bit about structure. For this example, we will have this str
 --------- index.html                        (the index.html file that we created above)
 --------- my-component/
 ------------- src/            
------------------ MyComponent.svelte        (the MyComponent.svelte created above)
+----------------- MyComponent.svelte        (the MyComponent.svelte component created above)
 ----------------- main.js                   (a new file that we will create below)
 ------------- dist/
 ----------------- bundle.js                 (not created yet, but our goal is to create this file)
@@ -140,7 +227,16 @@ First, let's talk a bit about structure. For this example, we will have this str
 
 
 
-So first let's create the **main.js** file, which will be used in the process by our building tool (rollup):
+
+Now let's talk about the general strategy to build/compile our component into the **bundle.js** file.
+
+Fortunately for us, all the tools we need are already built for us.
+
+We will use a tool called [rollup](https://rollupjs.org/guide/en/), which has the ability to compile our svelte component
+into the **bundle.js** file.
+
+
+Create the following **main.js** file:
 
 
 **file: /myapp/public/my-component/src/main.js**
@@ -154,15 +250,14 @@ window.MyComponent = function (options) {
 
 ```
 
+This file will be required/used by rollup later.
+
 Notice how this file creates a js global variable **MyComponent** and assigns the svelte component to it. 
 It's that same global variable that we referenced from the **index.html**.
 
 
+And now the scary part: the rollup configuration!
 
-Now how do we create the **bundle.js** file?
-
-
-Let's use **rollup**.
 
 So here is the rollup config I use:
 
@@ -250,12 +345,14 @@ function serve() {
 
 ```
 
-You might want to change the lines with the numbers (1), (2), (3) and (4).
 
+If you didn't use the same paths as I did, you might want to change the lines with the numbers (1), (2), (3) and (4).
 
+At this point, we are ready to execute rollup.
+ 
 
+Before we do so, let's install the packages required by rollup for a smooth execution. 
 
-Before we can execute rollup we need to install some packages.
 
 Let's create our **package.json**.
 
@@ -290,7 +387,9 @@ Let's create our **package.json**.
 
 ```
 
-If necessary, change the **sirv public** command to your webserver's root (for instance sirv www).
+If necessary, change the **sirv public** command (in the scripts section of the package.json) to your 
+webserver's root (for instance sirv www).
+
 
 
 Let's switch to the terminal and install the dependencies:
@@ -300,32 +399,28 @@ cd /myapp
 npm install
 ```
 
-Now we shall be able to call rollup.
+At this point, all the packages we need are installed, and we can rollup our component.
 
-We have to flavours (from our **package.json**), either use **npm run dev**, or use **npm run build**.
-
-Both commands will call rollup, but **npm run dev** will start an http server and auto-refresh the page when you save a file according to your rollup configuration (see number (4)).
-
-Here I will use **npm run dev** 
-
+Open a terminal and type the following:
 
 ```bash
 cd /myapp
 npm run dev 
 ```
 
-This will call rollup, which in turn will parse our **/myapp/public/my-component/src/main.js** file and
-create our bundle file(s) (js and optionally css).
+This will tell rollup to parse our **/myapp/public/my-component/src/main.js** file and
+create our **bundle.js** file (and optionally the **bundle.css** of your component used some css).
+
 
 Additionally, an http server instance will be launched at url: http://localhost:5000/ (by default).
 
-The svelte component now appears in our app.
+
+The svelte component now appears in our app as expected.
 
 
 So that's it.
 That's one way of injecting some svelte component into your existing app.
 
-Cheers.
 
 
 
