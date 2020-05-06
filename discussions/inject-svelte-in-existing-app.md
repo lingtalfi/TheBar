@@ -113,8 +113,9 @@ cd src
 
 
 The **src** directory will be used to put all our source code. And the **dist** directory will contain the compiled version
-of our source code (i.e. you need to compile a svelte component before you can use it in an html page, we will see how to compile
-later in this document).
+of our source code. That's because we need to compile a svelte component before we can use it in an html page.
+ 
+We will see how to compile later in this document.
 
 
 Now let's create our svelte component.
