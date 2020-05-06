@@ -65,6 +65,8 @@ Create an html page
 ---------
 
 
+Let's create our html page.
+
 **file: /myapp/public/index.html**
 ```html
 <!DOCTYPE html>
