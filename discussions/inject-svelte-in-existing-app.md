@@ -5,7 +5,7 @@ Inject svelte in an existing html page
 
 
 
-When you first encounter a new technology, like **svelte** for instance, a natural thing to do is to inject it 
+When you first encounter a new technology, like **svelte** for instance, a natural thing to do is to test it 
 in a simple html page to see how it fits.
 
 This is what we are going to do here.
