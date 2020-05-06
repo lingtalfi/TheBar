@@ -15,8 +15,8 @@ This recipe assumes that:
 
 - you know the basics of html, css and javascript
 - you know what a webserver is and you know how to spawn one
-- you have node installed on your machine and you know what package.json is
-- you know how to open a terminal and install type some commands
+- you have node installed on your machine, you know how to install an npm package, you are familiar with the package.json file
+- you know how to open a terminal and type some commands
 
 
 Let's get started.
