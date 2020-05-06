@@ -140,7 +140,7 @@ Now that we have both an html page and a svelte component, how do you inject you
 ### Inject a target element in your html
 
 
-What we would like to do is call an `<MyComponent>` tag directly in the html. 
+What we would like to do is write an `<MyComponent>` tag directly in the html. 
 Unfortunately that's not a valid html tag so it won't work.
 
 
