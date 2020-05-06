@@ -49,7 +49,7 @@ mkdir /myapp
 cd /myapp
 ```
 
-Of course, replace **myapp** with whatever directory you want. I will not mention such obvious things from now on.
+Of course, replace **myapp** with whatever directory you want. 
 
 
 We will also create a **public** directory, which will be our webserver's root directory.
