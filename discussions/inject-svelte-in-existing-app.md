@@ -226,7 +226,7 @@ The building of the component
 
 
 ### structure overview
-First, let's talk a bit about structure. For this example, we will have this structure:
+First, let's talk a bit about structure. So far, we have the following structure:
 
 
 ```text
