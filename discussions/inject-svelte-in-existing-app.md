@@ -457,3 +457,8 @@ So now, it's time to have fun with [svelte](https://svelte.dev/).
 
 
 
+Related
+------------
+
+- [my-svelte-component](https://github.com/lingtalfi/my-svelte-component): a svelte component template based on this recipe
+
