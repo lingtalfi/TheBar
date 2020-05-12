@@ -85,6 +85,8 @@ The benefits of the flat file system are the following:
     This includes: 
     - checking the filename's length (you don't want the user to provide a filename that's too long), although it's still a good idea to do so
     - checking the directory's length (you don't want the user to provide a directory that's too long), although it's still a good idea to do so
+    - potentially checking that the filename/directory doesn't contain escalating characters (../ for instance) 
+    
 - it eliminates the need for checking filename conflicts.
     This is a limitation of the regular file system which cannot have two files with the same path.
     With the flat filesystem, files can have the same directory/filename combination without conflicting with each other.
