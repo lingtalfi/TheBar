@@ -3,6 +3,7 @@ https://github.com/lingtalfi/TheBar/blob/master/README.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/flat-filesystem.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md

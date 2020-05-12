@@ -50,8 +50,8 @@ meta information described in the **file manager urls** section of this document
 
 reset 
 -------
-If your server uses a virtual file system, then the client must send the reset action to the server every time
-the page is reloaded, and/or when the user resets the gui (i.e. when he clicks the reset button of the form for instance).
+If your server uses a virtual file system such as [this one](https://github.com/lingtalfi/Light_UserData/blob/master/doc/pages/conception-notes.md),
+then the client must send the reset action to the server every time the page is reloaded, and/or when the user resets the gui (i.e. when he clicks the reset button of the form for instance).
 
 There is no particular payload for this operation.
 
@@ -90,6 +90,7 @@ The data is passed via the POST method, multipart/form-data style (https://devel
 - ?directory: the relative path of the directory which contains the file. 
 - ?tags: an array of tags to attach to the file
 - ?is_private: 0|1 (defaults to 0), whether the file should be private or public
+- ?keep_original: 0|1 (see the keep_originalUrl section for more details).
  
 
 In **chunk upload** mode, the following properties must be added:
@@ -125,6 +126,7 @@ Remember that the server can change any information provided by the user (hence 
 - directory: the directory path (relative to the user's directory) which contains the uploaded file  
 - tags: the array of tags attached to the uploaded file  
 - is_private: whether the file is private or public
+- original_url: string=null. The url to the original file if there is one, or null if there isn't. 
 
 
 Note that in the case of an image, the server might have altered the uploaded image to fit certain dimensions requirements (i.e. the 
