@@ -144,12 +144,17 @@ In case of a successful response, the server returns the following properties vi
     If the value is 0, the other properties are **NOT** returned.  
     
 - **url**: string, the url to the uploaded file  
+
+If you are using the **standard set** of parameters (described in the section above), then the server will return
+the extra-following parameters:
+
 - **filename**: string, the name of the uploaded file  
 - **directory**: string, the directory path (relative to the user's directory) which contains the uploaded file  
 - **tags**: array, the array of tags attached to the uploaded file  
 - **is_private**: 0|1, whether the file is private or public
-- **original_url**: string=null. The url to the original file if there is one, or null if there isn't. 
+- **original_url**: string=null. The url to the original file if there is one, or null if there isn't.
 
+ 
 
 Note that in the case of an image, the server might have altered the uploaded image to fit certain dimensions requirements (i.e. the 
 server might have cropped the uploaded image a bit). Therefore, in this case the js client shall request the new image (via the given
