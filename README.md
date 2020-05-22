@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-05-12
+2015-11-03 -> 2020-05-22
 
 
 
@@ -23,6 +23,7 @@ Listen to some of our customer's stories.
 - [simple chunk-upload protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md): the simple chunk upload protocol 
 - [inject svelte in an existing app](https://github.com/lingtalfi/TheBar/blob/master/discussions/inject-svelte-in-existing-app.md): Inject a svelte component in an existing app 
 - [flat-filesystem](https://github.com/lingtalfi/TheBar/blob/master/discussions/flat-filesystem.md): A flat filesystem 
+- [file-manager-protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md): the file manager protocol 
  
 
 
@@ -39,6 +40,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.15.0 -- 2020-05-22
+
+    - add the file manager protocol  
     
 - 1.14.0 -- 2020-05-12
 

@@ -1,6 +1,6 @@
 The file manager protocol
 ==============
-2020-04-06
+2020-04-06 -> 2020-05-22
 
 
 
@@ -9,7 +9,7 @@ This describes the communication between a js client and a server which allow th
 
 By managing, I mean:
 
-- the user has a dedicated space on the server where he can finds his files
+- the user has a dedicated space on the server where he can find his files
 - the user can upload new files
 - the user can delete his files
 - the user can edit the information of his files (he can change the name, and meta information such as tags)
@@ -18,7 +18,7 @@ By managing, I mean:
 
 
 
-Now the image editor capabilities are defined by the client alone and not part of this protocol.
+Now the image editor capabilities are defined by the client alone and are not part of this protocol.
 
 
 In this document, **acp** means [ajax communication protocol](https://github.com/lingtalfi/AjaxCommunicationProtocol), which is a json based protocol.
@@ -29,108 +29,130 @@ All actions, unless otherwise specified communicate via **acp**.
 
 How do the client and server communicate?
 =========
+2020-04-06 -> 2020-05-22
+
+The available operations, exposed by the server, are:
 
 
-The available operations are:
+- **add**: to add a file on the server
+- **delete**: to delete a file owned by the user 
+- **update**: to update the information of a file owned by the user  
+- **get_partial_size**: get the current size of a partially uploaded file, used to resume a paused chunk upload (only relevant if you use a chunk uploading system such as the [simple chunk upload protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md))
+- **reset**: to reset the virtual server (only relevant if your server uses a virtual file system such as the [TemporaryVirtualFileSystem](https://github.com/lingtalfi/TemporaryVirtualFileSystem/blob/master/doc/pages/conception-notes.md))
 
 
-- add: to add a file on the server
-- delete: to delete a file owned by the user 
-- update: to update the information of a file owned by the user  
-- get_partial_size: to get the current size of a partially uploaded file
-- reset: to reset the virtual server (in case the server exposes a virtual server)
-
-
-In addition to that, the **urls** returned by the server on the **add** action must contain additional
-meta information described in the **file manager urls** section of this document, and the client must know how to treat this meta information.    
-
+In addition to that, the server provides a way for the client to access a file by its **url** (more info below in this document).    
 
 
 
 
-reset 
--------
-If your server uses a virtual file system such as [this one](https://github.com/lingtalfi/Light_UserData/blob/master/doc/pages/conception-notes.md),
-then the client must send the reset action to the server every time the page is reloaded, and/or when the user resets the gui (i.e. when he clicks the reset button of the form for instance).
+To trigger an operation, the client must send a POST request to the server, 
+multipart/form-data style (https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST),
+with a parameter **action** which value is the name of the operation to execute.
 
-There is no particular payload for this operation.
+Each operation has also some specific parameters described below.
 
-The server must then reset the virtual file system when it receives this command, and respond with any success alcp response.  
+The server responds with a standard **acp** response.
 
 
 
 add 
 -------
+2020-04-06 -> 2020-05-22
 
-The add operation accepts two modes: 
-- regular upload: the whole file is uploaded at once on the server 
-- chunk upload: the file is sliced in chunks and every chunk are uploaded. It's possible to interrupt the upload and resume it later if the
-    server configuration (and the js client) allow it. If you have no particular need, this is the recommended method, as it will
-    handle more cases (especially if your application allows your users to upload big files). See the "keepOriginalUrl" section in this document for more details
+The **add** operation accepts two modes: 
+
+- **regular upload**: to upload the whole file at once on the server.
+
+    This is not recommended, since in the case of big files, the server could reject the upload.
+    With php, you might need to configure directives such as **post_max_size** and **upload_max_filesize**
+      
+- **chunk upload**: to send the file in small chunks.
+
+    This is recommended because you don't need to worry about the server rejecting your file, no matter which size it is. 
+ 
+    With this mode, it's also possible to interrupt the upload at any moment and resume it later if the
+    server configuration (and the js client) allow it (see the **get_partial_size** operation for more info). 
+    
+
+The extra parameters for the **add** action are the following:
+
+    
+        
+- **useChunks**: 0|1, mandatory.
+    Tells the server whether to use the **chunk upload** mode, or the **regular upload** mode.
+        
+- **file**: binary data, mandatory.
+    The binary data representing the file (or chunk if you're using the **chunk upload** mode) to upload.
+
+
+If you use the **chunk upload** mode, the following parameters are required:
+
+- **start**: int, the byte at which the slice (of the whole uploaded file) starts
+- **end**: int, the byte at which the slice ends (byte excluded)
+- **last_chunk**: 0|1, whether this slice is the last one of the file
+
+
+
+In addition to that, the client can send any other parameter it wants to the server.
+
+
+
+### Standard set
+
+As an example, in my own implementation I use the following set of extra-parameters, which I call **standard set**:
+
+- **configId**: string, mandatory.
+
+    The process instructions id. The server will know how to handle the upload (once finished) with this id. 
+    This ensures that the server has total control over every upload, since upload is a common vector for malicious attacks.
+    
+- **filename**: string, optional.
+    The name of the file.
+    This represents the wish of the client, but the server can overwrite this value if it wants to.
+        
+- **directory**: string, optional.
+    The relative path of the directory which contains the file.
+    This represents the wish of the client, but the server can overwrite this value if it wants to.
+    
+     
+- **tags**: array, optional.
+    An array of tags to attach to the file.
     
     
-The js client decides which mode to use with the **useChunks** property.    
-
-
-The client provides the file (js File object) and all the meta-information it has if the user has provided them already (such as tags, or 
-the file name that the user has changed).
-
-
-The data is passed via the POST method, multipart/form-data style (https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST).
-
-
- 
-- configId: the process instructions id. The server will know how to handle the upload (once finished) with this id. This ensures that the 
-    server has total control over every upload, since upload is a common vector for malicious attacks.
-   
-- useChunks: 0|1, whether to use the **chunk upload** mode or the **regular upload** mode.
-- file: the js File object to upload
-
-- ?filename: the name of the file (otherwise the server might take a guess based on the uploaded file).
-- ?directory: the relative path of the directory which contains the file. 
-- ?tags: an array of tags to attach to the file
-- ?is_private: 0|1 (defaults to 0), whether the file should be private or public
-- ?keep_original: 0|1 (see the keep_originalUrl section for more details).
+- **is_private**: 0|1=0, optional.
+    Whether the file should be private or public.
+    
+- **keep_original**: 0|1=0.
+    Tell the server to keep a copy of the file (see the **keepOriginalUrl** section for more details).
  
 
-In **chunk upload** mode, the following properties must be added:
 
-- start: the byte at which the slice (of the whole uploaded file) starts
-- end: the byte at which the slice ends (byte excluded)
-- last_chunk: 0|1, whether this slice is the last one of the file
+Note that for security reasons, the server can override any parameter passed by the client.
 
 
-If the user interrupts the uploading, then, if the server (and js client) allow it, it's possible to resume the upload later.
-To do so, the client first acquire the current size of the partially uploaded file by using the **get_partial_size** operation (described elsewhere 
-in this document). Then he just executes the **add** operation using the **chunk upload** mode with the start value being the size of the partially uploaded file. 
+### Server's response
 
-
-Note that all information passed via the user might be overridden by the server, due to security reasons.
-In particular, the directory is typically often fixed by the server.
-The file object can also be updated by the server (for instance if the server reduces an image so that it fits into a 200x200 square).
-
-
-
-The server's response uses the [ajax communication protocol](https://github.com/lingtalfi/AjaxCommunicationProtocol).
-In case of a success, the json array contains the following properties.
-
-Remember that the server can change any information provided by the user (hence we provide the data).
-
+In case of a successful response, the server returns the following properties via the standard **acp**:
    
-- is_fully_uploaded: 0|1. 0 means that this was just a chunk that was uploaded.
-    1 means the the full file has been uploaded (in a case of the chunk upload strategy, this means that all the chunks have been uploaded,
+- **is_fully_uploaded**: 0|1
+
+    0 means that this was just a chunk that was uploaded.
+    1 means the full file has been uploaded (in a case of the chunk upload strategy, this means that all the chunks have been uploaded,
     and the file has been rebuilt successfully on the server).
-    If the value is 0, all the other properties are not returned.  
-- url: the url to the uploaded file  
-- filename: the name of the uploaded file  
-- directory: the directory path (relative to the user's directory) which contains the uploaded file  
-- tags: the array of tags attached to the uploaded file  
-- is_private: whether the file is private or public
-- original_url: string=null. The url to the original file if there is one, or null if there isn't. 
+    
+    If the value is 0, the other properties are **NOT** returned.  
+    
+- **url**: string, the url to the uploaded file  
+- **filename**: string, the name of the uploaded file  
+- **directory**: string, the directory path (relative to the user's directory) which contains the uploaded file  
+- **tags**: array, the array of tags attached to the uploaded file  
+- **is_private**: 0|1, whether the file is private or public
+- **original_url**: string=null. The url to the original file if there is one, or null if there isn't. 
 
 
 Note that in the case of an image, the server might have altered the uploaded image to fit certain dimensions requirements (i.e. the 
-server might have cropped the uploaded image a bit). Therefore in this case the js client shall request the new image (via the given
+server might have cropped the uploaded image a bit). Therefore, in this case the js client shall request the new image (via the given
 url) to update its visual representation in the gui.  
 
 
@@ -138,17 +160,17 @@ url) to update its visual representation in the gui.
 
 delete
 ----------
+2020-04-06 -> 2020-05-22
 
 With this action, the client ask for the server to remove a resource from the server.
 
 
-The js client sends the following payload via post:
+The js client sends the following payload:
 
-- url: the url of the file to remove
+- **url**: string, the url of the file to remove
 
 
-The server will respond with the regular **acp** response.
-
+The server will respond with a regular **acp** response with not particular properties in it.
 
 
 
@@ -158,33 +180,77 @@ The server will respond with the regular **acp** response.
 
 update
 -------
+2020-04-06 -> 2020-05-22
 
 
 This allows the client to update a resource on the server.
 
-The client must send the same parameters as with the **add** action, but with the following extra parameters:
+The client sends the same parameters as with the **add** action, except that it can selectively choose which ones to update.
+So for instance it doesn't have to resend the file binary data if that hasn't changed.
 
-- url: string, the url of the resource to update
+So this means that the **file** parameter is optional.
 
 
-The server will respond with a regular **acp** response.
+Also, the following extra parameters must be provided:
+
+- **url**: string, the url of the resource to update
+
+
+The server will respond with the same **acp** response as with the **add** action.
+
+Remember that the server can override the client's value, and so the client should parse the server's response, and
+update the gui accordingly in order to keep synchronization between the state of the file in the server and in the gui.
+
+
 
 
 get_partial_size
 ----------
+2020-04-06 -> 2020-05-22
 
-This operation returns the size in bytes of a partially uploaded file.
-Not all server will allow this because it involves keeping track of those partially uploaded file.
+If you use the **chunk upload** mode, then it's possible to let the user interrupt the uploading at any moment, then resume it later.
 
-The js client must send the following properties:
+To do so, the client must first acquire the current size of the partially uploaded file by using the **get_partial_size** operation.
 
-- filename: the name of the file
-- ...? maybe other properties will be added in the future
+Then to resume the upload the client calls the **add** operation with the **chunk upload** mode again, but this time with the **start** parameter value
+being the size of the partially uploaded file (the size returned by the **get_partial_size** operation).
+
+
+The js client must send the following parameters:
+
+- **url**: the url of the file from which we want to get the partial size
 
 
 The server responds with an **acp** response. If the file exists:
 
-- size: the size in bytes of the partially uploaded file 
+- **size**: the size in bytes of the partially uploaded file 
+
+
+
+
+
+
+
+
+reset 
+-------
+2020-04-06 -> 2020-05-22
+
+This operation is only relevant if the server uses a virtual file system.
+ 
+The client must call the **reset** operation every time the page refreshes, and every time when the user resets the gui (i.e. when he clicks the reset button of the form for instance).
+
+
+There is no particular extra parameter associated with this operation.
+
+The server responds with a standard **acp** response with no particular properties.  
+
+
+
+
+
+
+
 
 
   
@@ -193,38 +259,69 @@ The server responds with an **acp** response. If the file exists:
 
 keepOriginalUrl 
 ===========
+2020-04-06 -> 2020-05-22
 
 This is an extra feature that allows the user to recall an image in its first state (i.e. when it was first uploaded),
-allowing him to test different cropping without having to re-upload the original image.
-
-
-When working with images, cropping is an interesting feature.
-However if the user keeps cropping the same file again and again, the image size gets smaller and smaller until there is nothing left to crop.
-
-Therefore in some cases it's a good idea to provide the original file rather than the cropped version, so that the user can change his mind
-and re-crop the image as many times as he wants without having to worry about the file dimensions to be reduced every time.
+allowing him to test different crops without having to re-upload the original image every time (to avoid the image getting smaller and smaller
+on every crop).
 
 So the idea is simple: when the user adds a new file, the server memorizes that file.
-Then with the gui, the user has the option to access that original image again. 
+Then with the help of the gui, the user has the option to access that original image again while editing the image. 
 
+There can be only one **original file** max per url.
 
-Implementation ideas
------
-
-
-The original file is called **original file**. There is only one **original file** max per url.
-All the variations of the user are called a **variation**. Although the user can test as many variations as he wants, there is always
-one variation per url at the time.
-
-When the user wants to upload a file and keep the original, he sends the keep_original=1 flag to the server along with the payload
-for an add operation.
+The client tells the server to keep the current image as an **original file** using the **keep_original** flag with a value of 1 in an **add** operation.
 
 When receiving that flag, the server stores the **original file** in a safe place.
-From now on every time a request is made for that url, the server will add the **original_url** property via the response headers and/or the response,
-depending on what's more practical.
 
-The js client receives the **original_url** value and stores it in its file representation, and handles the recall to that url when necessary (i.e. when the
+From now on every time the client accesses a file by its url, the server will add the **original_url** property as a meta-information 
+via the response headers.
+
+The js client receives the **original_url** value and can then show it back to the user when necessary (i.e. when the
 user asks for it via a gui button for instance). 
+ 
+
+
+
+
+
+Accessing a file by its url
+============
+2020-04-06 -> 2020-05-22
+
+
+
+With the **file-manager-protocol**, when the client accesses a file by its url, it can provide additional flags to do different things.
+
+
+The client sends the flags via **GET**.
+
+The available flags are:
+
+
+- **m**: string (0|1) = 0. Whether to add meta to the returned http response.
+
+    If true, the meta will be added via the [panda headers protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protocol.md).
+    The actual list of meta depends on the server.
+    
+    It could for instance return a parameter named **original_url** (see the **keepOriginalUrl** section in this document for more info).
+    
+    If you're using the **standard set** of parameters, it could for instance return those parameters in the meta: is_private, directory, filename, tags, etc...
+    
+    
+- **o**: string (0|1) = 0. This is only relevant if you are using the concept of original file.
+    Whether to return the file targeted by the url (by default), or the original file associated with it (if any). 
+    See the **keepOriginalUrl** section in this document for more details.
+    
+- **v**: string (0|1) = 0. This is only relevant if you are using a virtual file server.
+
+    Defines whether the file comes from the virtual server or the real server.
+    By default, the real server serves the file.
+   
+
+
+    
+
  
 
 
@@ -233,110 +330,7 @@ user asks for it via a gui button for instance).
 
 
 
-File manager urls
-=========
-2020-04-13
 
-When a successful **add** action is performed, the server returns an **url**. Along with this url, the server provides information
-necessary to make the file manager protocol work correctly.
-
-This meta information contains the following properties:
-
-- original_url: string, the url to the original url if any, see the **keepOriginalUrl** section for more details
-
-
-
-The information is delivered via the [panda headers protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protocol.md), and headers are
-prefixed with the **fmp_** string.
-Therefore, the panda headers will contain the following:
-
-- fmp_original_url: (value for the original_url property)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Old crappyThe fileEditor protocol addition 
-------------
-2020-01-28 -> 2020-02-21
-
-The fileEditor protocol addition is an extension of the ajax file upload protocol.
-The goal is to provide the user with a more powerful file management experience.
-
-
-The backend service is willing to handle the following extra-parameters (note that all of them can be overwritten by the server):
-
-- extension: mandatory, string = fileEditor.
-- action: optional, string(add|remove|update)=add.
-
-    This defines the type of action to execute. The two choices are **add**, **remove** and **update**.
-    With the **add** action, the intent is to add a new file to the server.
-    The **add** action might trigger an error if the file we are trying to create already exists in the server (i.e. name conflict),
-    depending on the server configuration.
-    
-    The **remove** action will delete an existing file. An error will be thrown if the user tries 
-    to remove a non-existing file or a file she has not permission on.
-    
-    The **update** action intent is to update information about the file, and/or the file itself.
-    Again, same as with the **add** action, if the updated file location already exists, the operation might be rejected 
-    by the server, depending on the server configuration.
-    
-    Depending on the action type, the parameters to send to the server will differ, and so might the server's response.
-    
-    
-     
-- Params for the **add** action:             
-    - filename: mandatory, string.
-    
-        The file path (including file extension) chosen by the user.
-        How it's used by the server depends on the server configuration: it might be just a filename which the server
-        would put in a predefined directory, or it could be a portion of path if the server configuration allows the
-        creation of subdirectories.        
-        
-        The server might even overwrite totally or partially the filename in order to provide
-        a better service (for instance the server could decide to choose the file extension).
-        
-    - is_private: optional, string=0|1.
-    
-        Indicates whether the file should be considered as private (only the user should be able to see it) 
-        or public (anybody can see it).
-        0 means public, 1 means private.
-        The server might not understand that parameter, check your server before using that parameter.
-        
-    - tags: optional, array=[].
-    
-        An array of tags to attach to the file.
-        It's an array of id => label,
-        where id is the identifier of the tag.
-        The server might not understand that parameter, check your server before using that parameter.
-        
-        
-- Params for the **remove** action:
-    - url: mandatory, string. 
-    
-    The url of the file to remove.     
-    
-- Params for the **update** action:
-    Same params as the params for the **add action**, but with one extra property:
-    - url: mandatory, string. The url of the file to update     
-         
-
-
-
-Response for the **add** action: same as the standard response.
-Response for the **remove** action: same as the standard response, but the url parameter is not sent back.
-Response for the **update** action: same as the standard response.
 
 
 
