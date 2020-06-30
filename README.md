@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-05-22
+2015-11-03 -> 2020-06-30
 
 
 
@@ -24,6 +24,7 @@ Listen to some of our customer's stories.
 - [inject svelte in an existing app](https://github.com/lingtalfi/TheBar/blob/master/discussions/inject-svelte-in-existing-app.md): Inject a svelte component in an existing app 
 - [flat-filesystem](https://github.com/lingtalfi/TheBar/blob/master/discussions/flat-filesystem.md): A flat filesystem 
 - [file-manager-protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md): the file manager protocol 
+- [create-file](https://github.com/lingtalfi/TheBar/blob/master/discussions/create-file.md): the create file 
  
 
 
@@ -40,6 +41,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.16.0 -- 2020-06-30
+
+    - add the create file discussion  
     
 - 1.15.0 -- 2020-05-22
 
