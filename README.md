@@ -25,6 +25,7 @@ Listen to some of our customer's stories.
 - [flat-filesystem](https://github.com/lingtalfi/TheBar/blob/master/discussions/flat-filesystem.md): A flat filesystem 
 - [file-manager-protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md): the file manager protocol 
 - [create-file](https://github.com/lingtalfi/TheBar/blob/master/discussions/create-file.md): the create file 
+- [permissive-dev-environment](https://github.com/lingtalfi/TheBar/blob/master/discussions/permissive-dev-environment): the permissive dev environment discussion 
  
 
 
@@ -41,6 +42,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.17.0 -- 2020-06-30
+
+    - add the permissive dev environment discussion  
     
 - 1.16.0 -- 2020-06-30
 
