@@ -9,6 +9,7 @@ https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/inject-svelte-in-existing-app.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/light-standard-permissions.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protocol.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/permissive-dev-environment.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md
