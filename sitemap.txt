@@ -15,6 +15,7 @@ https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protoc
 https://github.com/lingtalfi/TheBar/blob/master/discussions/permissive-dev-environment.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/preventing-path-traversal-attacks.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/section-comment.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/secure-file-upload.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/webapp-security-checklist.md

@@ -27,6 +27,7 @@ Listen to some of our customer's stories.
 - [php session security](https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md): a discussion about php session security
 - [Preventing path traversal attacks](https://github.com/lingtalfi/TheBar/blob/master/discussions/preventing-path-traversal-attacks.md): a discussion about directory traversal attacks and how to prevent them in php
 - [Secure file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/secure-file-upload.md): a discussion about secure file upload
+- [Section comment](https://github.com/lingtalfi/TheBar/blob/master/discussions/section-comment.md): a definition of a section comment
 - [simple chunk-upload protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md): the simple chunk upload protocol 
 - [webapp security checklist](https://github.com/lingtalfi/TheBar/blob/master/discussions/webapp-security-checklist.md): a minimum security level checklist for web apps
 
@@ -48,6 +49,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.20.0 -- 2020-07-21
+
+    - add section comment definition
     
 - 1.19.0 -- 2020-07-10
 
