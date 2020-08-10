@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-07-10
+2015-11-03 -> 2020-08-10
 
 
 
@@ -30,6 +30,7 @@ Listen to some of our customer's stories.
 - [Section comment](https://github.com/lingtalfi/TheBar/blob/master/discussions/section-comment.md): a definition of a section comment
 - [simple chunk-upload protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md): the simple chunk upload protocol 
 - [webapp security checklist](https://github.com/lingtalfi/TheBar/blob/master/discussions/webapp-security-checklist.md): a minimum security level checklist for web apps
+- [Generated custom config pattern](https://github.com/lingtalfi/TheBar/blob/master/discussions/generated-custom-config-pattern.md): a pattern to select a generated or custom config file on the fly
 
 
 
@@ -49,6 +50,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.21.0 -- 2020-08-10
+
+    - add the "Generated custom config pattern" document
     
 - 1.20.0 -- 2020-07-21
 
