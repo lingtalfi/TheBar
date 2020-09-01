@@ -42,6 +42,8 @@ Here is an example of what an arbitrary structure looks like with the regular fi
 
 
 In the flat filesystem, every file has a unique identifier, which serves as the identifier of the file, and some metadata associated with it.
+The identifier is also the path to the file.
+
 The metadata can contain anything and is stored in an external "store", which can be anything (a database, a file, etc...).
 
 To emulate a regular filesystem, we can use the following metadata for instance:
@@ -49,9 +51,7 @@ To emulate a regular filesystem, we can use the following metadata for instance:
 - filename
 
 
-The files of the flat system are actually stored in the regular filesystem, but without extension.
-
-So, here is how the same arbitrary structure would look like in the flat filesystem:
+So, here is how the same arbitrary structure could look like in the flat filesystem:
 
 ```txt
 - id001
@@ -59,7 +59,11 @@ So, here is how the same arbitrary structure would look like in the flat filesys
 - id003
 ```
 
-Notice that those are 3 concrete files, without extension, stored in the filesystem, and they have the same parent directory (hence the name flat system).
+ 
+Notice that those are 3 concrete files without extension, stored in the filesystem, and they have the same parent directory (hence the name flat system).
+
+Note: you decide whether to allow the use of the slash in your file identifiers. If you do, your structure by definition isn't flat anymore, but that's ok too. 
+
 
 
 
