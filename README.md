@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-09-01
+2015-11-03 -> 2020-09-07
 
 
 
@@ -26,6 +26,7 @@ Listen to some of our customer's stories.
 - [permissive-dev-environment](https://github.com/lingtalfi/TheBar/blob/master/discussions/permissive-dev-environment.md): the permissive dev environment discussion 
 - [php session security](https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md): a discussion about php session security
 - [Preventing path traversal attacks](https://github.com/lingtalfi/TheBar/blob/master/discussions/preventing-path-traversal-attacks.md): a discussion about directory traversal attacks and how to prevent them in php
+- [Ric](https://github.com/lingtalfi/TheBar/blob/master/discussions/ric.md): the ric definition
 - [Secure file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/secure-file-upload.md): a discussion about secure file upload
 - [Section comment](https://github.com/lingtalfi/TheBar/blob/master/discussions/section-comment.md): a definition of a section comment
 - [simple chunk-upload protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md): the simple chunk upload protocol 
@@ -50,6 +51,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.22.0 -- 2020-09-07
+
+    - add the ric definition
     
 - 1.21.2 -- 2020-09-01
 
