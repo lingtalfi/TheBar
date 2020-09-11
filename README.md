@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-09-07
+2015-11-03 -> 2020-09-11
 
 
 
@@ -10,6 +10,7 @@ Listen to some of our customer's stories.
 
 
 - [Ajax file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md): a discussion about ajax file upload
+- [Basic security nugget](basic-security-nugget.md): a discussion about the basic security nugget
 - [create-file](https://github.com/lingtalfi/TheBar/blob/master/discussions/create-file.md): the create file
 - [database identity usurpation](https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md): a discussion about some database identity usurpation 
 - [DevicesResolutions](https://github.com/lingtalfi/TheBar/blob/master/DevicesResolutions/devices-resolutions.md): devices resolutions cheat sheet
@@ -51,6 +52,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.23.0 -- 2020-09-11
+
+    - add the basic security nugget discussion
     
 - 1.22.0 -- 2020-09-07
 
