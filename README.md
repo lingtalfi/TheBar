@@ -53,6 +53,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.23.2 -- 2020-09-11
+
+    - add precision comment to basic security nugget discussion
+    
 - 1.23.1 -- 2020-09-11
 
     - fix typo

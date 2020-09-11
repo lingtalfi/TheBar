@@ -24,7 +24,8 @@ security:
 
 
 
-In the above example, I didn't use the **all** section.
+In the above example, I didn't use the **all** section. In fact, I could have dropped it entirely, 
+but I wanted to show you that it was there just in case.
 
 
 Each section is composed of directives.
