@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-09-11
+2015-11-03 -> 2020-09-17
 
 
 
@@ -52,6 +52,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.23.0 -- 2020-09-17
+
+    - update the form multiplier trick, new version
     
 - 1.23.2 -- 2020-09-11
 
