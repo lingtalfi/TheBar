@@ -29,8 +29,9 @@ Conventions
 
 - each control is wrapped into a html element (usually div) containing:
     - class: cfi-control 
-    - data-cfi-id: an identifier representing this control uniquely in the context of this form
-    
+    - data-cfi-id: an identifier representing this control uniquely in the context of this form.
+        The identifier must be in lowercase, due to the fact that some browsers have a special treatment
+        for uppercase letters in html attributes.
     
     
     
