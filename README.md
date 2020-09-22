@@ -54,6 +54,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.24.3 -- 2020-09-22
+
+    - update "clever form initiative" document, add precision to cfi-control elements holders
+    
 - 1.24.2 -- 2020-09-22
 
     - update "clever form initiative" document
