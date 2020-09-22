@@ -27,6 +27,19 @@ Conventions
 2020-09-22
 
 
+### Form
+2020-09-22
+
+The form must have the following html attributes:
+
+- class: cfi-form
+- data-cfi-id: an identifier representing this form in particular amongst all the potential forms in the page
+
+
+
+### Controls
+2020-09-22
+
 - each control is either wrapped into a html element (usually div) having the following html attributes,
     or, if it's a standalone element which cannot wrap other elements (for instance an input type=hidden element), then it must have itself the following html attributes:
     - class: cfi-control 
