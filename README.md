@@ -54,6 +54,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.24.2 -- 2020-09-22
+
+    - update "clever form initiative" document
+    
 - 1.24.1 -- 2020-09-22
 
     - update "clever form initiative" document
