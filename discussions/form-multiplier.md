@@ -1,6 +1,6 @@
 Form tricks: the multiplier 
 =============
-2019-12-03 -> 2020-09-17
+2019-12-03 -> 2020-09-28
 
 
 
@@ -11,6 +11,7 @@ There are some constraints:
 
 - this technique only works on **has** tables (i.e. tables with a many to many relationships)
 - there can only be one multiplier per table, see the [why only one mulitplier per table](#why-only-one-multiplier-per-table) section for more details
+- the **item_id**'s value type must be a scalar (i.e. not an array). The item_id concept is explained below. 
 
 
 
