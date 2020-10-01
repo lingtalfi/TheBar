@@ -1,17 +1,18 @@
 Form tricks: the multiplier 
 =============
-2019-12-03 -> 2020-09-28
+2019-12-03 -> 2020-10-01
 
 
 
 The multiplier is a technique where we use a form to insert multiple rows in a table at once.
 
 
+
+
 There are some constraints:
 
-- this technique only works on **has** tables (i.e. tables with a many to many relationships)
+- the table must have a [ric](https://github.com/lingtalfi/NotationFan/blob/master/ric.md) composed of at least two columns
 - there can only be one multiplier per table, see the [why only one mulitplier per table](#why-only-one-multiplier-per-table) section for more details
-- the **item_id**'s value type must be a scalar (i.e. not an array). The item_id concept is explained below. 
 
 
 
@@ -41,6 +42,8 @@ Now that we know that, we need to tell the form that the multiplied control, **i
 
 There are two form modes, **insert mode** and **update mode**, and the handling of the multiplier trick is different depending on that mode.
 
+
+In a nutshell, in insert mode we execute an **insert ignore** statement, while in update mode we execute a **delete** statement followed by an **insert ignore** statement.
 
 
 Insert mode
@@ -135,37 +138,19 @@ Notice that again the **pivot** column and the **ric** are required here.
 
 Why only one multiplier per table
 ----------
-2020-09-15
+2020-09-15 -> 2020-10-01
 
 
-The goal of the multiplier is to give the form user the power to edit the relationships between an owner and the things it owns.
-
-In terms of gui, if we imagine that the form represents the **user_has_item** table and has the following controls:
-
-- user_id
-- item_id
-
-It makes sense, gui wise, that the **user_id** control is a html select with a single value (i.e. not multiple),
-while the **item_id** control can be a select with multiple attribute on, so that we can assign which items the user owns.
 
 
-However, if you were on a form with two select multiple controls (if you can imagine that), that would be confusing, gui wise:
-you wouldn't intuitively know what outcome to expect out of that form, would you?
+The multiplier concept brings complexity to an app that implements it.
 
-My personal guess would be that if you select user_id=1,2 and item_id=4,5,6, then all the possible bindings would be created:
+To avoid too much complexity, we keep the multiplier concept very simple for now.
 
-- user_id=1 and item_id=4
-- user_id=1 and item_id=5
-- user_id=1 and item_id=6
-- user_id=2 and item_id=4
-- user_id=2 and item_id=5
-- user_id=2 and item_id=6
+This might change if the need for more than one multiplier per table is proven useful, which it hasn't yet.
 
-That's just a personal guess though, and I would still have some doubt. 
 
-That's why I decided that one multiplier max per table should be a rule, as to make the purpose of the form perfectly clear.
 
- 
 
 
     
