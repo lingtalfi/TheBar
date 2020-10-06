@@ -1,6 +1,6 @@
 The file manager protocol
 ==============
-2020-04-06 -> 2020-05-22
+2020-04-06 -> 2020-10-06
 
 
 
@@ -99,6 +99,7 @@ In addition to that, the client can send any other parameter it wants to the ser
 
 
 ### Standard set
+2020-04-06 -> 2020-10-06
 
 As an example, in my own implementation I use the following set of extra-parameters, which I call **standard set**:
 
@@ -106,9 +107,12 @@ As an example, in my own implementation I use the following set of extra-paramet
 
     The process instructions id. The server will know how to handle the upload (once finished) with this id. 
     This ensures that the server has total control over every upload, since upload is a common vector for malicious attacks.
+    Typically, the **config id** references a configuration file on the server, which contains extra information, 
+    such as which thumbnails to create if it's an image that was uploaded, for instance.
+    
     
 - **filename**: string, optional.
-    The name of the file.
+    The name of the file, which includes the file extension.
     This represents the wish of the client, but the server can overwrite this value if it wants to.
         
 - **directory**: string, optional.
