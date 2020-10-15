@@ -1,6 +1,6 @@
 The file manager protocol
 ==============
-2020-04-06 -> 2020-10-06
+2020-04-06 -> 2020-10-15
 
 
 
@@ -29,16 +29,16 @@ All actions, unless otherwise specified communicate via **acp**.
 
 How do the client and server communicate?
 =========
-2020-04-06 -> 2020-05-22
+2020-04-06 -> 2020-10-15
 
 The available operations, exposed by the server, are:
 
 
-- **add**: to add a file on the server
-- **delete**: to delete a file owned by the user 
-- **update**: to update the information of a file owned by the user  
-- **get_partial_size**: get the current size of a partially uploaded file, used to resume a paused chunk upload (only relevant if you use a chunk uploading system such as the [simple chunk upload protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md))
-- **reset**: to reset the virtual server (only relevant if your server uses a virtual file system such as the [TemporaryVirtualFileSystem](https://github.com/lingtalfi/TemporaryVirtualFileSystem/blob/master/doc/pages/conception-notes.md))
+- [add](https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md#add): to add a file on the server
+- [delete](https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md#delete): to delete a file owned by the user 
+- [update](https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md#update): to update the information of a file owned by the user  
+- [get_partial_size](https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md#get_partial_size): get the current size of a partially uploaded file, used to resume a paused chunk upload (only relevant if you use a chunk uploading system such as the [simple chunk upload protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md))
+- [reset](https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md#reset): to reset the virtual server (only relevant if your server uses a virtual file system such as the [TemporaryVirtualFileSystem](https://github.com/lingtalfi/TemporaryVirtualFileSystem/blob/master/doc/pages/conception-notes.md))
 
 
 In addition to that, the server provides a way for the client to access a file by its **url** (more info below in this document).    
@@ -108,7 +108,8 @@ As an example, in my own implementation I use the following set of extra-paramet
     The process instructions id. The server will know how to handle the upload (once finished) with this id. 
     This ensures that the server has total control over every upload, since upload is a common vector for malicious attacks.
     Typically, the **config id** references a configuration file on the server, which contains extra information, 
-    such as which thumbnails to create if it's an image that was uploaded, for instance.
+    such as which thumbnails to create if it's an image that was uploaded, for instance, or which file extensions are allowed, do we use a virtual file system,
+    override the filename completely, how to react if the uploaded filename already exists, etc...
     
     
 - **filename**: string, optional.

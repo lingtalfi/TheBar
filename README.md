@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-10-06
+2015-11-03 -> 2020-10-15
 
 
 
@@ -54,7 +54,7 @@ uni import Ling/TheBar
 History Log
 ===============
     
-- 1.24.6 -- 2020-10-01
+- 1.24.7 -- 2020-10-15
 
     - update file manager protocol
     
