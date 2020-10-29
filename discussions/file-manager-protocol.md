@@ -1,6 +1,6 @@
 The file manager protocol
 ==============
-2020-04-06 -> 2020-10-15
+2020-04-06 -> 2020-10-29
 
 
 
@@ -133,6 +133,7 @@ As an example, in my own implementation I use the following set of extra-paramet
  
 
 
+
 Note that for security reasons, the server can override any parameter passed by the client.
 
 
@@ -211,6 +212,20 @@ The server will respond with the same **acp** response as with the **add** actio
 Remember that the server can override the client's value, and so the client should parse the server's response, and
 update the gui accordingly in order to keep synchronization between the state of the file in the server and in the gui.
 
+
+
+### Standard set
+2020-10-29
+
+
+If you are using the standard set, the parameters are the same as the **add** action's standard set, with the addition
+of the following extra parameters:
+
+- reuse_original: 0|1.
+    Tell the server to reuse an original which it has already.
+    This replaces the **file** property, the goal being that it saves the js client to re-upload the original file.
+    This is used by the client in the case the user wants to re-use the original image as is.
+    
 
 
 
