@@ -54,6 +54,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.24.9 -- 2020-10-29
+
+    - update file manager protocol, remove reuse_original parameter
+    
 - 1.24.8 -- 2020-10-29
 
     - update file manager protocol, add reuse_original parameter

@@ -214,18 +214,6 @@ update the gui accordingly in order to keep synchronization between the state of
 
 
 
-### Standard set
-2020-10-29
-
-
-If you are using the standard set, the parameters are the same as the **add** action's standard set, with the addition
-of the following extra parameters:
-
-- reuse_original: 0|1.
-    Tell the server to reuse an original which it has already.
-    This replaces the **file** property, the goal being that it saves the js client to re-upload the original file.
-    This is used by the client in the case the user wants to re-use the original image as is.
-    
 
 
 
