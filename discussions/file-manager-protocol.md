@@ -1,6 +1,6 @@
 The file manager protocol
 ==============
-2020-04-06 -> 2020-10-29
+2020-04-06 -> 2020-11-09
 
 
 
@@ -138,6 +138,7 @@ Note that for security reasons, the server can override any parameter passed by 
 
 
 ### Server's response
+2020-11-09
 
 In case of a successful response, the server returns the following properties via the standard **acp**:
    
@@ -154,7 +155,7 @@ In case of a successful response, the server returns the following properties vi
 If you are using the **standard set** of parameters (described in the section above), then the server will return
 the extra-following parameters:
 
-- **filename**: string, the name of the uploaded file  
+- **name**: string, the [filename](https://github.com/lingtalfi/NotationFan/blob/master/filename-basename.md) of the uploaded file  
 - **directory**: string, the directory path (relative to the user's directory) which contains the uploaded file  
 - **tags**: array, the array of tags attached to the uploaded file  
 - **is_private**: 0|1, whether the file is private or public
