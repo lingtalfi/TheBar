@@ -54,6 +54,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.24.11 -- 2020-11-09
+
+    - update file manager protocol, add precision to the standard set
+    
 - 1.24.10 -- 2020-11-09
 
     - update file manager protocol, update server's response to add operation

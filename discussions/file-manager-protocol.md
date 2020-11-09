@@ -99,7 +99,7 @@ In addition to that, the client can send any other parameter it wants to the ser
 
 
 ### Standard set
-2020-04-06 -> 2020-10-06
+2020-04-06 -> 2020-11-09
 
 As an example, in my own implementation I use the following set of extra-parameters, which I call **standard set**:
 
@@ -113,11 +113,13 @@ As an example, in my own implementation I use the following set of extra-paramet
     
     
 - **filename**: string, optional.
-    The name of the file, which includes the file extension.
+    The [filename](https://github.com/lingtalfi/NotationFan/blob/master/filename-basename.md) of the file, which includes the file extension.
     This represents the wish of the client, but the server can overwrite this value if it wants to.
+    It shouldn't contain any slash.
         
 - **directory**: string, optional.
     The relative path of the directory which contains the file.
+    It could potentially contain slashes (if the application allows it).
     This represents the wish of the client, but the server can overwrite this value if it wants to.
     
      
