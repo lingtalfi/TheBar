@@ -1,6 +1,6 @@
 Form tricks: the multiplier 
 =============
-2019-12-03 -> 2020-10-01
+2019-12-03 -> 2020-11-13
 
 
 
@@ -18,7 +18,29 @@ There are some constraints:
 
 
 
-How does it work?
+The two properties
+----------
+2020-11-13
+
+
+There are two properties to remember:
+
+- **pivot**
+- **item_id**
+
+
+Those are explained in more details in the next section, but basically the **pivot** is the owner, and the **item_id**
+is the column that is inserted/updated multiple times.
+
+
+
+
+
+How does it work
+----------
+2020-11-13
+
+
 
 Consider the **user_has_item** table:
 
