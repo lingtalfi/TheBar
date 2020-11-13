@@ -18,12 +18,12 @@ There are some constraints:
 
 
 
-The two properties
+The form multiplier array
 ----------
 2020-11-13
 
 
-There are two properties to remember:
+There form multiplier array consists of two properties:
 
 - **pivot**
 - **item_id**

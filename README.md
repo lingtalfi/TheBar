@@ -54,6 +54,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.24.13 -- 2020-11-13
+
+    - update form-multiplier document
+    
 - 1.24.12 -- 2020-11-13
 
     - update form-multiplier document
