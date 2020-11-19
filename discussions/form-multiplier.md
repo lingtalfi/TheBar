@@ -168,7 +168,17 @@ In terms of sql it looks like this:
     
 
 
+The multiplier array
+----------
+2020-11-19
 
+As a convenience for developers, we provide a basic array representing the multiplier's intent.
+Developers can refer to this array if they want to.
+
+- multiplier:
+    - mode: string (off|has|own), the mode of the multiplier. If "off", then the multiplier is not used.
+    - multiplied: string, the name of the **multiplied** column.
+    - ?owner: string, the name of the **owner** column (only useful if the multiplier is in **has** mode)
 
 
 

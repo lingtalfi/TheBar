@@ -54,6 +54,10 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.24.16 -- 2020-11-19
+
+    - update form-multiplier document, add "The multiplier array" reference
+    
 - 1.24.15 -- 2020-11-19
 
     - update form-multiplier document, changed pivot to owner (makes more sense)
