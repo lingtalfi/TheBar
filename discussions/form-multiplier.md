@@ -46,11 +46,11 @@ More on that later.
 
 We also introduce two terms:
 
-- pivot 
+- owner 
 - multiplied 
 
 
-The pivot will be explained in more details in the **HAS** section.
+The **owner** term will be explained in more details in the **HAS** section.
 The **multiplied** term represents the column which is multiplied during the insert/update operation.
 
 
@@ -61,7 +61,7 @@ The OWN mode
 2020-11-19
 
 
-This case applies for tables that have a foreign key, but no **pivot** (see the **HAS** mode for more details).
+This case applies for tables that have a foreign key, but no **owner** (see the **HAS** mode for more details).
 
 Typically, we have this table:
 
@@ -91,7 +91,7 @@ In order to populate the **user_id** control with all the possible values of use
 - select id from user 
 
 
-This convenience makes only sense in the insert mode of the form, since the table has no **pivot**.
+This convenience makes only sense in the insert mode of the form, since the table has no **owner**.
 
 When the form is submitted successfully, the insert queries would look something like this:
 
@@ -128,8 +128,8 @@ So typically we have these tables:
     - item_id: fk
     
     
-With the **HAS** mode, we define the **pivot** as the column that represents the owner thing (the **user_id** column in this example),
-and the **multiplied** column as the owned thing (the **item_id** column in this example).
+With the **HAS** mode, we define the **owner** as the column that represents the owner thing (the **user_id** column in this example),
+and the **multiplied** column as the column representing the owned thing (the **item_id** column in this example).
 
 
 With the **HAS** mode, we can handle both the insert and update modes of the form.

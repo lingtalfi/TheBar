@@ -54,9 +54,13 @@ uni import Ling/TheBar
 History Log
 ===============
     
+- 1.24.15 -- 2020-11-19
+
+    - update form-multiplier document, changed pivot to owner (makes more sense)
+    
 - 1.24.14 -- 2020-11-19
 
-    - update form-multiplier document
+    - update form-multiplier document, new conception
     
 - 1.24.13 -- 2020-11-13
 
