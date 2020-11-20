@@ -1,6 +1,6 @@
 Form tricks: the multiplier 
 =============
-2019-12-03 -> 2020-11-19
+2019-12-03 -> 2020-11-20
 
 
 
@@ -23,7 +23,7 @@ When the form is posted, an entry is inserted for each value.
 
 How does it work?
 ------------
-2020-11-19
+2020-11-19 -> 2020-11-20
 
 
 
@@ -33,37 +33,17 @@ First, we assume that a form is always in one of two modes:
 - update, where the controls are pre-filled with values
 
 
-Then, we distinguish the following **modes**:
-
-- OWN: designed for inserting only 
-- HAS: designed for insert and update
-- ...more cases might be added in the future, maybe
+The multiplier trick works only in insert mode.
 
 
-Which **mode** to use depends on the table structure.
-More on that later.
 
-
-We also introduce two terms:
-
-- owner 
-- multiplied 
-
-
-The **owner** term will be explained in more details in the **HAS** section.
-The **multiplied** term represents the column which is multiplied during the insert/update operation.
+To update multiple rows at once, the best solution is probably to use a multiple row editor.
+See the [Why no update mode](#why-no-update-mode) section for more details.
 
 
 
 
-The OWN mode
-------------
-2020-11-19
-
-
-This case applies for tables that have a foreign key, but no **owner** (see the **HAS** mode for more details).
-
-Typically, we have this table:
+Typically, we have a table like this:
 
 - item
     - id: ai
@@ -74,6 +54,7 @@ Typically, we have this table:
     
 
 In the **item** table above, the **user_id** column is a foreign key to the **user.id** column (assuming there is a user table with an id column).
+
 The **user_id** column is called the **multiplied** column.
 
 
@@ -101,87 +82,50 @@ When the form is submitted successfully, the insert queries would look something
 
 
 
+That's it.
 
-The HAS mode
---------------
-2020-11-19
-
-
-The **HAS** mode applies for "has" tables.
-A "has" table is a table which primary key contains only foreign keys.
-
-A "has" table has an owner and an owned thing, which is defined by the semantic behind the table name.
-For instance, if the table name is **user_has_item**, then the owner thing is the user, and the owned thing is the item.
-
-
-So typically we have these tables:
-
-
-- item
-    - id: ai
-
-- user
-    - id: ai
-
-- user_has_item
-    - user_id: fk
-    - item_id: fk
-    
-    
-With the **HAS** mode, we define the **owner** as the column that represents the owner thing (the **user_id** column in this example),
-and the **multiplied** column as the column representing the owned thing (the **item_id** column in this example).
-
-
-With the **HAS** mode, we can handle both the insert and update modes of the form.
-
-In both cases, the form would look like this:
-    
-- USER_HAS_ITEM FORM
-    - user_id: 5
-    - item_id: multiple select (array: 201, 204, 206 for instance)
-    
-In both cases, we need to fetch all the possible values for the **user_id** control, using the following query:
-
-- select id from user
-  
-The only difference is that in update mode, we also need to fetch the values of the items already owned by the user which id is given.
-So for instance if the given **user_id** is 5, then we need to perform this query:
-
-- select item_id from user_has_item where user_id=5
-
-
-In insert mode, when the form is submitted successfully, the insert queries would look something like this:
-
-- insert into user_has_item (user_id, item_id) values ( 5, 201 ) 
-- insert into user_has_item (user_id, item_id) values ( 5, 204 ) 
-- insert into user_has_item (user_id, item_id) values ( 5, 206 )
-
-
-In update mode, we assume that the user wants to redefine the relationships between the user thing and the item thing, and
-so we first delete all the relationships, then recreate them.
-In terms of sql it looks like this:
-
-- delete * from user_has_item where user_id=5 
-- insert into user_has_item (user_id, item_id) values ( 5, 201 ) 
-- insert into user_has_item (user_id, item_id) values ( 5, 204 ) 
-- insert into user_has_item (user_id, item_id) values ( 5, 206 )
     
 
 
 The multiplier array
 ----------
-2020-11-19
+2020-11-19 -> 2020-11-20
 
 As a convenience for developers, we provide a basic array representing the multiplier's intent.
 Developers can refer to this array if they want to.
 
-- multiplier:
-    - mode: string (off|has|own), the mode of the multiplier. If "off", then the multiplier is not used.
-    - multiplied: string, the name of the **multiplied** column.
-    - ?owner: string, the name of the **owner** column (only useful if the multiplier is in **has** mode)
+- multiplier: string, the name of the **multiplied** column.
 
 
 
 
+
+
+
+Why no update mode
+----------
+2020-11-20
+
+Today I just realized that the update mode I've implemented is too risky.
+The update mode basically does a "delete *", followed by an "insert *".
+
+While it can arguably be useful with "has" tables which only have the primary key and no other columns.
+
+This is a bad idea to use this technique on a "has" table which contains other columns, let me explain why.
+
+For instance, consider this table:
+
+- user_has_item
+    - user_id: fk
+    - item_id: fk
+    - position: int
+    
+    
+Because of the position column, it's not recommended using the multiplier form trick.
+
+If we did, all the affected records would have the same position, because that's what the multiplier trick does, it creates identical records, except for the **multiplied** column.
+So, that's not what we want.
+
+Instead, I believe one has to realize that a multiple row editor is the only correct way (afaik) to edit multiple rows at once.    
 
 
