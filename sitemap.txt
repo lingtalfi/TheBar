@@ -4,6 +4,7 @@ https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/basic-security-nugget.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/clever-form-initiative.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/create-file.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/curious-notations-in-light.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/docblock-comment.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md

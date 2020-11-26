@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-11-20
+2015-11-03 -> 2020-11-26
 
 
 
@@ -13,6 +13,7 @@ Listen to some of our customer's stories.
 - [Basic security nugget](https://github.com/lingtalfi/TheBar/blob/master/discussions/basic-security-nugget.md): a discussion about the basic security nugget
 - [clever form initiative](https://github.com/lingtalfi/TheBar/blob/master/discussions/clever-form-initiative.md): the clever form initiative document
 - [create-file](https://github.com/lingtalfi/TheBar/blob/master/discussions/create-file.md): the create file
+- [curious notations in light](https://github.com/lingtalfi/TheBar/blob/master/discussions/curious-notations-in-light.md): the curious notations in light memo
 - [database identity usurpation](https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md): a discussion about some database identity usurpation 
 - [DevicesResolutions](https://github.com/lingtalfi/TheBar/blob/master/DevicesResolutions/devices-resolutions.md): devices resolutions cheat sheet
 - [docblock comment](https://github.com/lingtalfi/TheBar/blob/master/discussions/docblock-comment.md): a doc block comment definition
@@ -53,6 +54,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+    
+- 1.24.18 -- 2020-11-26
+
+    - add "curious notations in light" document
     
 - 1.24.17 -- 2020-11-20
 
