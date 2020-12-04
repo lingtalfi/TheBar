@@ -55,7 +55,11 @@ uni import Ling/TheBar
 
 History Log
 ===============
-    
+
+- 1.24.20 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.24.19 -- 2020-11-30
 
     - add "error logging convention" document
