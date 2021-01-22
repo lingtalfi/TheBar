@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2020-11-30
+2015-11-03 -> 2021-01-22
 
 
 
@@ -23,6 +23,7 @@ Listen to some of our customer's stories.
 - [form multiplier trick](https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md): a discussion about php session security
 - [full ajax form](https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md): the full ajax form technique 
 - [Iframe signal](https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md): a discussion about the iframe signal technique
+- [import install](https://github.com/lingtalfi/TheBar/blob/master/discussions/import-install.md): a disambiguation about the import install concepts 
 - [inject svelte in an existing app](https://github.com/lingtalfi/TheBar/blob/master/discussions/inject-svelte-in-existing-app.md): Inject a svelte component in an existing app 
 - [Joe's Corner](https://github.com/lingtalfi/TheBar/blob/master/joe/README.md): tells you about how the universe should be organized 
 - [light-standard-permissions](https://github.com/lingtalfi/TheBar/blob/master/discussions/light-standard-permissions.md): the light standard permissions 
@@ -56,6 +57,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.22 -- 2021-01-22
+
+    - add "import install" discussion 
+  
 - 1.24.21 -- 2020-12-08
 
     - Fix lpi-deps not using natsort.
