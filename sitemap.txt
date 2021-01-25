@@ -14,6 +14,7 @@ https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/generated-custom-config-pattern.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/import-install.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/inject-svelte-in-existing-app.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/light-standard-permissions.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protocol.md
@@ -24,5 +25,6 @@ https://github.com/lingtalfi/TheBar/blob/master/discussions/ric.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/section-comment.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/secure-file-upload.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/table-scope.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/webapp-security-checklist.md
 https://github.com/lingtalfi/TheBar/blob/master/joe/README.md

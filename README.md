@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-01-22
+2015-11-03 -> 2021-01-25
 
 
 
@@ -35,6 +35,7 @@ Listen to some of our customer's stories.
 - [Secure file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/secure-file-upload.md): a discussion about secure file upload
 - [Section comment](https://github.com/lingtalfi/TheBar/blob/master/discussions/section-comment.md): a definition of a section comment
 - [simple chunk-upload protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/simple-chunk-upload-protocol.md): the simple chunk upload protocol 
+- [table scope](https://github.com/lingtalfi/TheBar/blob/master/discussions/table-scope.md): the table scope definition 
 - [webapp security checklist](https://github.com/lingtalfi/TheBar/blob/master/discussions/webapp-security-checklist.md): a minimum security level checklist for web apps
 - [Generated custom config pattern](https://github.com/lingtalfi/TheBar/blob/master/discussions/generated-custom-config-pattern.md): a pattern to select a generated or custom config file on the fly
 
@@ -57,6 +58,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.23 -- 2021-01-25
+
+    - add "table scope" discussion—definition 
+  
 - 1.24.22 -- 2021-01-22
 
     - add "import install" discussion 
