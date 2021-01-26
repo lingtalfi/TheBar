@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-01-25
+2015-11-03 -> 2021-01-26
 
 
 
@@ -11,6 +11,7 @@ Listen to some of our customer's stories.
 
 - [Ajax file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md): a discussion about ajax file upload
 - [Basic security nugget](https://github.com/lingtalfi/TheBar/blob/master/discussions/basic-security-nugget.md): a discussion about the basic security nugget
+- [classic log levels](https://github.com/lingtalfi/TheBar/blob/master/discussions/classic-log-levels.md): the classic log levels definition
 - [clever form initiative](https://github.com/lingtalfi/TheBar/blob/master/discussions/clever-form-initiative.md): the clever form initiative document
 - [create-file](https://github.com/lingtalfi/TheBar/blob/master/discussions/create-file.md): the create file
 - [curious notations in light](https://github.com/lingtalfi/TheBar/blob/master/discussions/curious-notations-in-light.md): the curious notations in light memo
@@ -58,6 +59,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.24 -- 2021-01-26
+
+    - add "classic log levels" definition 
+  
 - 1.24.23 -- 2021-01-25
 
     - add "table scope" discussion—definition 
