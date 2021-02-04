@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-01-26
+2015-11-03 -> 2021-02-02
 
 
 
@@ -59,6 +59,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.25 -- 2021-02-02
+
+    - update import/install definition 
+  
 - 1.24.24 -- 2021-01-26
 
     - add "classic log levels" definition 

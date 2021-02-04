@@ -1,6 +1,6 @@
 Import install 
 ================
-2021-01-22
+2021-01-22 -> 2021-02-04
 
 
 
@@ -12,12 +12,13 @@ In this document, I'll explain the differences between those.
 
 Summary
 --------
-2021-01-22
+2021-01-22 -> 2021-02-02
 
 
 - **import**: imports a planet along with its dependencies, recursively. Optionally, can install the [assets/map](https://github.com/lingtalfi/UniverseTools/blob/master/doc/pages/conception-notes.md#the-planets-and-assetsmap).
-- **install**: this is a two steps process:
+- **install**: this is divided in the following steps:
     - **import** the planet with **assets/map**
+    - optionally configuring the installed files (for instance in Light, the service configuration files can be configured here)
     - if it's a light plugin, do a **logic install** (if the plugin is installable)
 - **logic install**: this is a term created by the [Light_PluginInstaller](https://github.com/lingtalfi/Light_PluginInstaller) to characterize its own install operation (which allows plugins to install/update tables in a database, amongst other things)
     
