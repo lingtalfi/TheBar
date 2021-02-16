@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-02-02
+2015-11-03 -> 2021-02-16
 
 
 
@@ -27,6 +27,7 @@ Listen to some of our customer's stories.
 - [import install](https://github.com/lingtalfi/TheBar/blob/master/discussions/import-install.md): a disambiguation about the import install concepts 
 - [inject svelte in an existing app](https://github.com/lingtalfi/TheBar/blob/master/discussions/inject-svelte-in-existing-app.md): Inject a svelte component in an existing app 
 - [Joe's Corner](https://github.com/lingtalfi/TheBar/blob/master/joe/README.md): tells you about how the universe should be organized 
+- [kwin notation](https://github.com/lingtalfi/TheBar/blob/master/discussions/kwin-notation.md): the kwin notation 
 - [light-standard-permissions](https://github.com/lingtalfi/TheBar/blob/master/discussions/light-standard-permissions.md): the light standard permissions 
 - [panda-headers protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protocol.md): the panda-headers protocol 
 - [permissive-dev-environment](https://github.com/lingtalfi/TheBar/blob/master/discussions/permissive-dev-environment.md): the permissive dev environment discussion 
@@ -59,6 +60,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.26 -- 2021-02-16
+
+    - add kwin notation 
+  
 - 1.24.25 -- 2021-02-02
 
     - update import/install definition 
