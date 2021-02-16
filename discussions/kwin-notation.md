@@ -30,7 +30,7 @@ With:
 
 
 The mini markdown notation only is just regular text, but the double asterisk wrapping (which makes a word bold in markdown)
-is allowed.
+is allowed. Also, links are accepted.
 
 it can span over multiple lines.
 

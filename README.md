@@ -60,6 +60,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.27 -- 2021-02-16
+
+    - update kwin notation 
+  
 - 1.24.26 -- 2021-02-16
 
     - add kwin notation 
