@@ -60,6 +60,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.29 -- 2021-02-18
+
+    - update kwin notation, now uses multiple of four indentation 
+  
 - 1.24.28 -- 2021-02-18
 
     - update kwin notation, add kwin array 

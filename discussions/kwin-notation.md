@@ -20,8 +20,7 @@ $argumentDescription?
 With:
 
 - **$commandName**: the name of the command (only alpha-numeric chars a-zA-Z0-9_-)
-- **$description**: the description of the command, using [mini markdown notation](#mini-markdown).
-    If the description spans over multiple lines, the lines (except the first one) must be indented with four spaces.    
+- **$description**: the description of the command, using [mini markdown notation](#mini-markdown).   
 - **$argumentDescription**: the argument description, as explained below
 
 
@@ -47,19 +46,21 @@ The argument description section is optional. It goes like this (the number of p
 
 ```txt
     - Arguments:
-      - parameters: 
-        - $parameterName: $parameterDefinition 
-        - ... 
-      - options: 
-        - $optionName: $optionDefinition
-        - ... 
-      - flags: 
-        - $flagName: $flagDefinition
-        - ... 
+        - parameters: 
+            - $parameterName: $parameterDefinition 
+            - ... 
+        - options: 
+            - $optionName: $optionDefinition
+            - ... 
+        - flags: 
+            - $flagName: $flagDefinition
+            - ... 
 ```
 
 
 All sections (parameters, options and flags) are optional.
+
+Note that the indentation uses multiples of four.
 
 All definitions can use [mini markdown notation](#mini-markdown).
 
@@ -68,8 +69,8 @@ The **$parameterName** can bre prefixed with a question mark (?) to indicate tha
 For instance:
 ```txt
     - Arguments:
-      - parameters: 
-        - ?planetDotName: blabla
+        - parameters: 
+            - ?planetDotName: blabla
 ```
 
 
@@ -79,10 +80,10 @@ The list of options is always located after the description (if any), it looks l
 
 ```txt 
     - Arguments:
-      - options: 
-        - $optionName: ?$generalDescription
-          - $itemName: $itemDescription 
-          - ...
+        - options: 
+            - $optionName: ?$generalDescription
+                - $itemName: $itemDescription 
+                - ...
 ```
 
 
@@ -97,7 +98,7 @@ The list of options is always located after the description (if any), it looks l
 
 Example
 ----------
-2021-02-16
+2021-02-16 -> 2021-02-18
 
 
 In the following example, we have two commands defined (help and import):
@@ -109,27 +110,22 @@ In the following example, we have two commands defined (help and import):
     The [assets/map](https://github.com/lingtalfi/UniverseTools/blob/master/doc/pages/conception-notes.md#the-planets-and-assetsmap) are not copied.
       
     - Arguments:
-      - parameters: 
-        - planetDefinition: if the **planetDefinition** argument is defined, it will [import](https://github.com/lingtalfi/TheBar/blob/master/discussions/import-install.md#summary) 
-          the given planet (and its dependencies recursively), without the **assets/map**, and update the **lpi.byml** file accordingly, using a plus symbol at the end of every newly imported planet's version number.
+        - parameters: 
+            - planetDefinition: if the **planetDefinition** argument is defined, it will [import](https://github.com/lingtalfi/TheBar/blob/master/discussions/import-install.md#summary) 
+            the given planet (and its dependencies recursively), without the **assets/map**, and update the **lpi.byml** file accordingly, using a plus symbol at the end of every newly imported planet's version number.
           
             The **$planetDefinition** stands for: $planetDotName(:$versionExpression)?
           
             With:
             - planetDotName: the [planetDotName](https://github.com/karayabin/universe-snapshot#the-planet-https://github.com/lingtalfi/TheBar/blob/master/discussions/import-install.md#summarydot-name)
             - versionExpression: the [versionExpression](#version-expression), defaults to last if not defined
-      - options: 
-        - bernoni: string (auto|manual) = auto. The mode to use when a [bernoni conflict](#the-bernoni-problem-what-happens-in-case-of-conflict) occurs.
-        - fakeOptions: This is just to demonstrate the list notation.
-          - item1: this is the value for item 1
-          - item2: this is the value for item 2.
-            But item 2 has two lines, and this is the second line.              
-          - item3: this is the value for item 3
-      - flags: 
-        - keep-build: if set, the [build dir](#importing-to-the-build-dir) will not be automatically removed after a successful operation.
-        - d: if set, enables the debug mode, in which all log levels messages are displayed
-        - n: if set, doesn't update the **lpi file** when the **planetDefinition** parameter is defined
-        - f: if set, forces the reimporting of the planet, even if it's already in your app
+        - options: 
+            - bernoni: string (auto|manual) = auto. The mode to use when a [bernoni conflict](#the-bernoni-problem-what-happens-in-case-of-conflict) occurs.
+        - flags: 
+            - keep-build: if set, the [build dir](#importing-to-the-build-dir) will not be automatically removed after a successful operation.
+            - d: if set, enables the debug mode, in which all log levels messages are displayed
+            - n: if set, doesn't update the **lpi file** when the **planetDefinition** parameter is defined
+            - f: if set, forces the reimporting of the planet, even if it's already in your app
 ```
 
 
