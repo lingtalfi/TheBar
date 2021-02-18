@@ -1,6 +1,6 @@
 Kwin notation
 =============
-2021-02-16
+2021-02-16 -> 2021-02-18
 
 Kwin notation is a way of writing documentation for cli commands.
 
@@ -19,29 +19,30 @@ $argumentDescription?
 
 With:
 
-- **$commandName**: the name of the command (only alpha-numeric chars)
+- **$commandName**: the name of the command (only alpha-numeric chars a-zA-Z0-9_-)
 - **$description**: the description of the command, using [mini markdown notation](#mini-markdown).
+    If the description spans over multiple lines, the lines (except the first one) must be indented with four spaces.    
 - **$argumentDescription**: the argument description, as explained below
 
 
 
 ### mini markdown
-2021-02-16
+2021-02-16 -> 2021-02-18
 
 
-The mini markdown notation only is just regular text, but the double asterisk wrapping (which makes a word bold in markdown)
-is allowed. Also, links are accepted.
+The mini markdown notation only is just regular text, but the following markdown features are accepted, if they are on the same line (i.e. they cannot span over multiple lines)
 
-it can span over multiple lines.
+- double asterisk wrapping (which makes a word bold in markdown)
+- text links 
+
 
 
 
 ### argument description
-2021-02-16
+2021-02-16 -> 2021-02-18
 
 
-The argument description is like this (the number of indenting whitespace is not double-checked by my third party tools, 
-so it's not very important):
+The argument description section is optional. It goes like this (the number of prefixing whitespaces is important):
 
 
 ```txt
@@ -57,7 +58,40 @@ so it's not very important):
         - ... 
 ```
 
+
+All sections (parameters, options and flags) are optional.
+
 All definitions can use [mini markdown notation](#mini-markdown).
+
+The **$parameterName** can bre prefixed with a question mark (?) to indicate that the parameter is optional.
+
+For instance:
+```txt
+    - Arguments:
+      - parameters: 
+        - ?planetDotName: blabla
+```
+
+
+The **$optionDefinition** can include a list of options, in case the available options is a well known set.
+The list of options is always located after the description (if any), it looks like this:
+
+
+```txt 
+    - Arguments:
+      - options: 
+        - $optionName: ?$generalDescription
+          - $itemName: $itemDescription 
+          - ...
+```
+
+
+
+
+
+
+
+
 
 
 
@@ -86,12 +120,45 @@ In the following example, we have two commands defined (help and import):
             - versionExpression: the [versionExpression](#version-expression), defaults to last if not defined
       - options: 
         - bernoni: string (auto|manual) = auto. The mode to use when a [bernoni conflict](#the-bernoni-problem-what-happens-in-case-of-conflict) occurs.
+        - fakeOptions: This is just to demonstrate the list notation.
+          - item1: this is the value for item 1
+          - item2: this is the value for item 2.
+            But item 2 has two lines, and this is the second line.              
+          - item3: this is the value for item 3
       - flags: 
         - keep-build: if set, the [build dir](#importing-to-the-build-dir) will not be automatically removed after a successful operation.
         - d: if set, enables the debug mode, in which all log levels messages are displayed
         - n: if set, doesn't update the **lpi file** when the **planetDefinition** parameter is defined
         - f: if set, forces the reimporting of the planet, even if it's already in your app
 ```
+
+
+
+kwin array
+-------------
+2021-02-16
+
+The kwin array is a php array representing a given command.
+Its structure is the following:
+
+
+- name: the name of the command.
+- description: the description of the command.
+- parameters: an array of name => \[description, isMandatory].
+- options: an array of name => optionItem.
+  
+    Each optionItem is an array with the following structure:
+    
+    - desc: string, the description of the option.
+    - values: array of possible values for this option.
+         It's an array of value => description (which can be null if you want)    
+
+- flags: an array of name => description.
+
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-02-16
+2015-11-03 -> 2021-02-18
 
 
 
@@ -60,6 +60,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.28 -- 2021-02-18
+
+    - update kwin notation, add kwin array 
+  
 - 1.24.27 -- 2021-02-16
 
     - update kwin notation 
