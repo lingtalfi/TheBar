@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-02-18
+2015-11-03 -> 2021-02-19
 
 
 
@@ -60,6 +60,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.29 -- 2021-02-19
+
+    - update kwin notation, add aliases  
+  
 - 1.24.29 -- 2021-02-18
 
     - update kwin notation, now uses multiple of four indentation 

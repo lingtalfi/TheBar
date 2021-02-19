@@ -1,6 +1,6 @@
 Kwin notation
 =============
-2021-02-16 -> 2021-02-18
+2021-02-16 -> 2021-02-19
 
 Kwin notation is a way of writing documentation for cli commands.
 
@@ -38,7 +38,7 @@ The mini markdown notation only is just regular text, but the following markdown
 
 
 ### argument description
-2021-02-16 -> 2021-02-18
+2021-02-16 -> 2021-02-19
 
 
 The argument description section is optional. It goes like this (the number of prefixing whitespaces is important):
@@ -55,10 +55,13 @@ The argument description section is optional. It goes like this (the number of p
         - flags: 
             - $flagName: $flagDefinition
             - ... 
+        - aliases: 
+            - $aliasName
+            - ... 
 ```
 
 
-All sections (parameters, options and flags) are optional.
+All sections (parameters, options, flags and aliases) are optional.
 
 Note that the indentation uses multiples of four.
 
@@ -132,7 +135,7 @@ In the following example, we have two commands defined (help and import):
 
 kwin array
 -------------
-2021-02-16
+2021-02-16 -> 2021-02-19
 
 The kwin array is a php array representing a given command.
 Its structure is the following:
@@ -150,6 +153,7 @@ Its structure is the following:
          It's an array of value => description (which can be null if you want)    
 
 - flags: an array of name => description.
+- aliases: an array of aliases
 
 
 
