@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-02-19
+2015-11-03 -> 2021-03-05
 
 
 
@@ -52,6 +52,11 @@ TheBar is part of the [universe framework](https://github.com/karayabin/universe
 
 Install
 ==========
+Using the [planet installer](https://github.com/lingtalfi/Light_PlanetInstaller) via [light-cli](https://github.com/lingtalfi/Light_Cli)
+```bash
+lt install Ling.TheBar
+```
+
 Using the [uni](https://github.com/lingtalfi/universe-naive-importer) command.
 ```bash
 uni import Ling/TheBar
@@ -59,6 +64,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+
+- 1.24.30 -- 2021-03-05
+
+    - update README.md, add install alternative
 
 - 1.24.29 -- 2021-02-19
 
