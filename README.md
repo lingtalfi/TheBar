@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-03-05
+2015-11-03 -> 2021-03-19
 
 
 
@@ -64,6 +64,10 @@ uni import Ling/TheBar
 
 History Log
 ===============
+
+- 1.24.31 -- 2021-03-19
+
+    - update section comment document
 
 - 1.24.30 -- 2021-03-05
 

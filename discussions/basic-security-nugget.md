@@ -17,7 +17,7 @@ It has two sections: **any** and **all**, and looks like this:
 ````yaml
 security:
     any:
-        permission: Light_Kit_Admin.admin
+        permission: Ling.Light_Kit_Admin.admin
         micro_permission: store.lud_user.read
     all: []          
 ````

@@ -21,3 +21,22 @@ lt install Ling.PhpBeast
 
 
 
+Then we need to create a directory where to put our tests.
+
+I choose:
+
+- /universe/Ling/TokenFun/bnb   (since I'm working in the TokenFun planet)
+
+
+
+Now let's create some test files:
+
+
+- /universe/Ling/TokenFun/bnb/use-statements-parser-parseTokens.bnb.php
+
+
+I added the **bnb.php** extension, so that the beauty component can collect all those extensions and show them to me.
+
+
+Then I put my tests in that file.
+

@@ -9,7 +9,7 @@ When they do so, they always add the word "generated" somewhere in the file path
 
 For instance, the [Light_RealGenerator plugin](https://github.com/lingtalfi/Light_RealGenerator) will generate a path like this for the realform config:
 
-- /myapp/config/data/Light_Kit_Admin_UserPreferences/Light_Realform/generated/lup_user_preference.byml
+- /myapp/config/data/Ling.Light_Kit_Admin_UserPreferences/Ling.Light_Realform/generated/lup_user_preference.byml
 
 
 
