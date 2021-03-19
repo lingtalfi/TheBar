@@ -46,7 +46,6 @@ A **section** is composed of the following elements:
 
 - the file ends
 - the **section header comment** of the next section starts
-- a **dash line** is found
 
 
 
@@ -70,7 +69,6 @@ pou
 dji
 pou
 
-# --------------------------------------
 
 ```
 
