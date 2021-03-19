@@ -65,6 +65,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.32 -- 2021-03-19
+
+    - update section comment document, add some nomenclature
+  
 - 1.24.31 -- 2021-03-19
 
     - update section comment document
