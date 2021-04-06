@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-03-19
+2015-11-03 -> 2021-04-06
 
 
 
@@ -19,6 +19,7 @@ Listen to some of our customer's stories.
 - [DevicesResolutions](https://github.com/lingtalfi/TheBar/blob/master/DevicesResolutions/devices-resolutions.md): devices resolutions cheat sheet
 - [docblock comment](https://github.com/lingtalfi/TheBar/blob/master/discussions/docblock-comment.md): a doc block comment definition
 - [error logging convention](https://github.com/lingtalfi/TheBar/blob/master/discussions/error-logging-convention.md): the error logging convention document
+- [handy exception](https://github.com/lingtalfi/TheBar/blob/master/discussions/handy-exception.md): the handy exception definition
 - [file-manager-protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/file-manager-protocol.md): the file manager protocol 
 - [flat-filesystem](https://github.com/lingtalfi/TheBar/blob/master/discussions/flat-filesystem.md): A flat filesystem 
 - [form multiplier trick](https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md): a discussion about php session security
@@ -65,6 +66,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.34 -- 2021-04-06
+
+    - add handy exception definition
+  
 - 1.24.33 -- 2021-03-19
 
     - update section comment document, remove single dash line to end section concept
