@@ -1,6 +1,6 @@
 Kwin notation
 =============
-2021-02-16 -> 2021-02-19
+2021-02-16 -> 2021-05-31
 
 Kwin notation is a way of writing documentation for cli commands.
 
@@ -38,7 +38,7 @@ The mini markdown notation only is just regular text, but the following markdown
 
 
 ### argument description
-2021-02-16 -> 2021-02-19
+2021-02-16 -> 2021-05-31
 
 
 The argument description section is optional. It goes like this (the number of prefixing whitespaces is important):
@@ -61,7 +61,8 @@ The argument description section is optional. It goes like this (the number of p
 ```
 
 
-All sections (parameters, options, flags and aliases) are optional.
+All sections (parameters, options, flags and aliases) are optional, but the order in which they appear should be the same (parameters first, then options,
+then flags, then aliases).
 
 Note that the indentation uses multiples of four.
 
