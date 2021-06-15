@@ -1,6 +1,7 @@
 https://github.com/lingtalfi/TheBar/blob/master/DevicesResolutions/devices-resolutions.md
 https://github.com/lingtalfi/TheBar/blob/master/README.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md
+https://github.com/lingtalfi/TheBar/blob/master/discussions/alcp-service.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/basic-security-nugget.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/beauty-and-beast-unit-testing-memo.md
 https://github.com/lingtalfi/TheBar/blob/master/discussions/classic-log-levels.md

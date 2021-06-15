@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-05-31
+2015-11-03 -> 2021-06-15
 
 
 
@@ -10,6 +10,7 @@ Listen to some of our customer's stories.
 
 
 - [Ajax file upload discussion](https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md): a discussion about ajax file upload
+- [Alcp service](https://github.com/lingtalfi/TheBar/blob/master/discussions/alcp-service.md): a definition of the alcp service
 - [Basic security nugget](https://github.com/lingtalfi/TheBar/blob/master/discussions/basic-security-nugget.md): a discussion about the basic security nugget
 - [classic log levels](https://github.com/lingtalfi/TheBar/blob/master/discussions/classic-log-levels.md): the classic log levels definition
 - [clever form initiative](https://github.com/lingtalfi/TheBar/blob/master/discussions/clever-form-initiative.md): the clever form initiative document
@@ -66,6 +67,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.37 -- 2021-06-15
+
+    - add alcp service definition
+  
 - 1.24.36 -- 2021-05-31
 
     - Removing trailing plus in lpi-deps file (to work with Light_PlanetInstaller:2.0.0 api
