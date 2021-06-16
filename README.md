@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-06-15
+2015-11-03 -> 2021-06-16
 
 
 
@@ -31,6 +31,7 @@ Listen to some of our customer's stories.
 - [Joe's Corner](https://github.com/lingtalfi/TheBar/blob/master/joe/README.md): tells you about how the universe should be organized 
 - [kwin notation](https://github.com/lingtalfi/TheBar/blob/master/discussions/kwin-notation.md): the kwin notation 
 - [light-standard-permissions](https://github.com/lingtalfi/TheBar/blob/master/discussions/light-standard-permissions.md): the light standard permissions 
+- [Micro-permissions based system](https://github.com/lingtalfi/TheBar/blob/master/discussions/micro-permissions-based-system.md): introducing the micro-permissions based system 
 - [panda-headers protocol](https://github.com/lingtalfi/TheBar/blob/master/discussions/panda-headers-protocol.md): the panda-headers protocol 
 - [permissive-dev-environment](https://github.com/lingtalfi/TheBar/blob/master/discussions/permissive-dev-environment.md): the permissive dev environment discussion 
 - [php session security](https://github.com/lingtalfi/TheBar/blob/master/discussions/php-session-security.md): a discussion about php session security
@@ -67,6 +68,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.38 -- 2021-06-16
+
+    - add "micro-permissions based system" discussion
+  
 - 1.24.37 -- 2021-06-15
 
     - add alcp service definition
