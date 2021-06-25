@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-06-16
+2015-11-03 -> 2021-06-25
 
 
 
@@ -25,6 +25,7 @@ Listen to some of our customer's stories.
 - [flat-filesystem](https://github.com/lingtalfi/TheBar/blob/master/discussions/flat-filesystem.md): A flat filesystem 
 - [form multiplier trick](https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md): a discussion about php session security
 - [full ajax form](https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md): the full ajax form technique 
+- [global controller vars](https://github.com/lingtalfi/TheBar/blob/master/discussions/global-controller-vars.md): the global controller vars convention 
 - [Iframe signal](https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md): a discussion about the iframe signal technique
 - [import install](https://github.com/lingtalfi/TheBar/blob/master/discussions/import-install.md): a disambiguation about the import install concepts 
 - [inject svelte in an existing app](https://github.com/lingtalfi/TheBar/blob/master/discussions/inject-svelte-in-existing-app.md): Inject a svelte component in an existing app 
@@ -68,6 +69,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.39 -- 2021-06-25
+
+    - add "global controller vars" discussion
+  
 - 1.24.38 -- 2021-06-16
 
     - add "micro-permissions based system" discussion
