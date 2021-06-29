@@ -18,7 +18,7 @@ Listen to some of our customer's stories.
 - [curious notations in light](https://github.com/lingtalfi/TheBar/blob/master/discussions/curious-notations-in-light.md): the curious notations in light memo
 - [database identity usurpation](https://github.com/lingtalfi/TheBar/blob/master/discussions/database-identity-usurpation.md): a discussion about some database identity usurpation 
 - [DevicesResolutions](https://github.com/lingtalfi/TheBar/blob/master/DevicesResolutions/devices-resolutions.md): devices resolutions cheat sheet
-- [digger convention](https://github.com/lingtalfi/TheBar/blob/master/DevicesResolutions/digger.md): the digger convention explained
+- [digger convention](https://github.com/lingtalfi/TheBar/blob/master/discussions/digger.md): the digger convention explained
 - [docblock comment](https://github.com/lingtalfi/TheBar/blob/master/discussions/docblock-comment.md): a doc block comment definition
 - [error logging convention](https://github.com/lingtalfi/TheBar/blob/master/discussions/error-logging-convention.md): the error logging convention document
 - [handy exception](https://github.com/lingtalfi/TheBar/blob/master/discussions/handy-exception.md): the handy exception definition
@@ -70,6 +70,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.41 -- 2021-06-29
+
+    - fix digger convention link in README.md
+  
 - 1.24.40 -- 2021-06-29
 
     - add digger convention document
