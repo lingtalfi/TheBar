@@ -1,6 +1,6 @@
 TheBar
 ======
-2015-11-03 -> 2021-06-29
+2015-11-03 -> 2021-07-02
 
 
 
@@ -26,6 +26,7 @@ Listen to some of our customer's stories.
 - [flat-filesystem](https://github.com/lingtalfi/TheBar/blob/master/discussions/flat-filesystem.md): A flat filesystem 
 - [form multiplier trick](https://github.com/lingtalfi/TheBar/blob/master/discussions/form-multiplier.md): a discussion about php session security
 - [full ajax form](https://github.com/lingtalfi/TheBar/blob/master/discussions/full-ajax-form.md): the full ajax form technique 
+- [full table](https://github.com/lingtalfi/TheBar/blob/master/discussions/full-table.md): the full table definition 
 - [global controller vars](https://github.com/lingtalfi/TheBar/blob/master/discussions/global-controller-vars.md): the global controller vars convention 
 - [Iframe signal](https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md): a discussion about the iframe signal technique
 - [import install](https://github.com/lingtalfi/TheBar/blob/master/discussions/import-install.md): a disambiguation about the import install concepts 
@@ -70,6 +71,10 @@ uni import Ling/TheBar
 History Log
 ===============
 
+- 1.24.42 -- 2021-07-02
+
+    - add full table definition
+  
 - 1.24.41 -- 2021-06-29
 
     - fix digger convention link in README.md
